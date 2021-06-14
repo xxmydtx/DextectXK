@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Detect_xk
 {
-    public partial class Form1 : Form
+    public partial class Operator : Form
     {
-        public Form1()
+        public Operator()
         {
             InitializeComponent();
         }
