@@ -10,21 +10,32 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Net.Sockets;
+using System.IO;
 
 namespace Detect_xk
 {
     public partial class MainForm : Form
     {
         Thread threadWatch = null; // 负责监听客户端连接请求的 线程；
+        Thread SocMain = null;
         Thread MainThread = null;
         Socket socketWatch = null;
         Socket sokConnection = null;
+        string CurConfigAdr = null;
+        bool Is_Connected = false;
+
+
         public static Status status = Status.WAIT_FOR_USER;
         public MainForm()
         {
             InitializeComponent();
+            // 获取所有配置文件
+            ConfigInit();
+            // 加载Config文件
+            
+            // 初始化网络连接
             TcpInit();
-            //开启主线程
+            // 开启主线程
             MainThread = new Thread(MainTd);
             
         }
@@ -64,28 +75,48 @@ namespace Detect_xk
 
         private void btn_Lisening_Click(object sender, EventArgs e)
         {
-            btn_Lisening.Enabled = false;
-            txtIp.Enabled = false;
-            txtport.Enabled = false;
-            socketWatch = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            IPAddress address = IPAddress.Parse(txtIp.Text.Trim());
-            //一个套接字
-            IPEndPoint endPoint = new IPEndPoint(address, int.Parse(txtport.Text.Trim()));
-            try
+            if(txtIp.Enabled == true)
             {
-                socketWatch.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
-                socketWatch.Bind(endPoint);
+                btn_Lisening.Text = "关闭监听";
+                txtIp.Enabled = false;
+                txtport.Enabled = false;
+                socketWatch = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                IPAddress address = IPAddress.Parse(txtIp.Text.Trim());
+                //一个套接字
+                IPEndPoint endPoint = new IPEndPoint(address, int.Parse(txtport.Text.Trim()));
+                try
+                {
+                    socketWatch.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+                    socketWatch.Bind(endPoint);
+                }
+                catch (SocketException es)
+                {
+                    MessageBox.Show("异常：" + es.Message);
+                    return;
+                }
+                socketWatch.Listen(100);
+                threadWatch = new Thread(WatchConnecting);
+                threadWatch.IsBackground = true;
+                threadWatch.Start();
+                ShowMsg("服务器启动监听成功！");
             }
-            catch(SocketException es)
+            else
             {
-                MessageBox.Show("异常：" + es.Message);
-                return;
+                btn_Lisening.Text = "开始监听";
+                txtIp.Enabled = true;
+                txtport.Enabled = true;
+                
+                socketWatch.Close();
+                threadWatch.Abort();
+                while (threadWatch.ThreadState != ThreadState.Aborted)
+                { 
+                    Thread.Sleep(100);
+                }
+                SocMain.Abort();
+                sokConnection.Close();
+                Is_Connected = false;
             }
-            socketWatch.Listen(100);
-            threadWatch = new Thread(WatchConnecting);
-            threadWatch.IsBackground = true;
-            threadWatch.Start();
-            ShowMsg("服务器启动监听成功！");
+            
         }
         private void ShowMsg(string s)
         {
@@ -107,16 +138,17 @@ namespace Detect_xk
 
         void WatchConnecting()
         {
-            ShowMsg("新客户端连接成功");
-            while (true)  // 持续不断的监听客户端的连接请求；
+            while (Is_Connected == false)  // 持续不断的监听客户端的连接请求；
             {
                 // 开始监听客户端连接请求，Accept方法会阻断当前的线程；
                 sokConnection = socketWatch.Accept(); // 一旦监听到一个客户端的请求，就返回一个与该客户端通信的 套接字；
                 var ssss = sokConnection.RemoteEndPoint.ToString().Split(':');
                 // 将与客户端连接的 套接字 对象添加到集合中；
-                Thread thr = new Thread(RecMsg);
-                thr.IsBackground = true;
-                thr.Start(sokConnection);
+                SocMain = new Thread(RecMsg);
+                SocMain.IsBackground = true;
+                SocMain.Start(sokConnection);
+                Is_Connected = true;
+                ShowMsg("新客户端连接成功");
             }
         }
         void RecMsg(object sokConnectionparn)
@@ -156,15 +188,6 @@ namespace Detect_xk
                     //log.log("遇见异常"+se.Message);
                     break;
                 }
-                catch (Exception e)
-                {
-                    
-                    // 从列表中移除被中断的连接IP
-                    lbOnline.Items.Remove(sokClient.RemoteEndPoint.ToString());
-                    ShowMsg("异常消息：" + e.Message + "\r\n");
-                    // log.log("遇见异常" + e.Message);
-                    break;
-                }
             }
         }
 
@@ -174,7 +197,60 @@ namespace Detect_xk
             byte[] byteArray = System.Text.Encoding.Default.GetBytes(s);
             sokConnection.Send(byteArray);
         }
+
+        private void ConfigInit()
+        {
+            try
+            {
+                //获取Config路径
+                DirectoryInfo Dir = new DirectoryInfo(System.Environment.CurrentDirectory + "/Config");
+                var list = Dir.GetFiles();
+                for(int i = 0;i<list.Length;i++)
+                {
+                    ConfigAdr.Items.Add(list[i].Name);
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("未获取到配置文件信息:" + ex);
+            }
+
+        }
+        private void load_Config(string adr)
+        {
+            load_Config(CurConfigAdr);
+            if (adr == null)
+            {
+                MessageBox.Show("error ： 配置文件为空");
+            }
+            else
+            {
+                // 将参数加载进来的处理
+            }
+        }
+
+        private void loader_Click(object sender, EventArgs e)
+        {
+            if(ConfigAdr.Enabled == true)
+            {
+                ConfigAdr.Enabled = false;
+                CurConfigAdr = ConfigAdr.Text;
+                loader.Text = "取消";
+            }
+            else
+            {
+                ConfigAdr.Enabled = true;
+                CurConfigAdr = null;
+                loader.Text = "加载";
+            }
+        }
     }
+}
+
+public class Message
+{
+    int x = 0, y = 0;
     
 }
 
@@ -190,5 +266,12 @@ public enum Status
 
     DETECTING = 4,
     //运行完算法之后，记录并展示结果 进入SENDING状态
+}
 
+public static class Config {
+    static string adr = null;
+    static void Init(ComboBox adrlist)
+    {
+        adr = adrlist.Text;
+    }
 }

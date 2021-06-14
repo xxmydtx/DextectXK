@@ -134,18 +134,20 @@
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btn_send = new System.Windows.Forms.Button();
+            this.SendBox = new System.Windows.Forms.RichTextBox();
+            this.lbOnline = new System.Windows.Forms.ListBox();
             this.MsgBox = new System.Windows.Forms.RichTextBox();
             this.txtport = new System.Windows.Forms.TextBox();
             this.btn_Lisening = new System.Windows.Forms.Button();
             this.txtIp = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ConfigAdr = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.lbOnline = new System.Windows.Forms.ListBox();
-            this.SendBox = new System.Windows.Forms.RichTextBox();
-            this.btn_send = new System.Windows.Forms.Button();
+            this.loader = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -185,6 +187,7 @@
             this.skinPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage4.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1328,6 +1331,34 @@
             this.tabPage4.Text = "通信配置";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // btn_send
+            // 
+            this.btn_send.Location = new System.Drawing.Point(462, 86);
+            this.btn_send.Name = "btn_send";
+            this.btn_send.Size = new System.Drawing.Size(103, 30);
+            this.btn_send.TabIndex = 9;
+            this.btn_send.Text = "发送消息";
+            this.btn_send.UseVisualStyleBackColor = true;
+            this.btn_send.Click += new System.EventHandler(this.btn_send_Click);
+            // 
+            // SendBox
+            // 
+            this.SendBox.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SendBox.Location = new System.Drawing.Point(462, 122);
+            this.SendBox.Name = "SendBox";
+            this.SendBox.Size = new System.Drawing.Size(268, 308);
+            this.SendBox.TabIndex = 8;
+            this.SendBox.Text = "";
+            // 
+            // lbOnline
+            // 
+            this.lbOnline.FormattingEnabled = true;
+            this.lbOnline.ItemHeight = 20;
+            this.lbOnline.Location = new System.Drawing.Point(336, 122);
+            this.lbOnline.Name = "lbOnline";
+            this.lbOnline.Size = new System.Drawing.Size(120, 84);
+            this.lbOnline.TabIndex = 7;
+            // 
             // MsgBox
             // 
             this.MsgBox.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -1374,6 +1405,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.loader);
+            this.tabPage2.Controls.Add(this.ConfigAdr);
             this.tabPage2.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
@@ -1381,6 +1414,14 @@
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "参数配置";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // ConfigAdr
+            // 
+            this.ConfigAdr.FormattingEnabled = true;
+            this.ConfigAdr.Location = new System.Drawing.Point(40, 36);
+            this.ConfigAdr.Name = "ConfigAdr";
+            this.ConfigAdr.Size = new System.Drawing.Size(121, 28);
+            this.ConfigAdr.TabIndex = 0;
             // 
             // pictureBox2
             // 
@@ -1412,33 +1453,15 @@
             this.label37.TabIndex = 10;
             this.label37.Text = "汽车多媒体中控平台检测系统";
             // 
-            // lbOnline
+            // loader
             // 
-            this.lbOnline.FormattingEnabled = true;
-            this.lbOnline.ItemHeight = 20;
-            this.lbOnline.Location = new System.Drawing.Point(336, 122);
-            this.lbOnline.Name = "lbOnline";
-            this.lbOnline.Size = new System.Drawing.Size(120, 84);
-            this.lbOnline.TabIndex = 7;
-            // 
-            // SendBox
-            // 
-            this.SendBox.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SendBox.Location = new System.Drawing.Point(462, 122);
-            this.SendBox.Name = "SendBox";
-            this.SendBox.Size = new System.Drawing.Size(268, 308);
-            this.SendBox.TabIndex = 8;
-            this.SendBox.Text = "";
-            // 
-            // btn_send
-            // 
-            this.btn_send.Location = new System.Drawing.Point(462, 86);
-            this.btn_send.Name = "btn_send";
-            this.btn_send.Size = new System.Drawing.Size(103, 30);
-            this.btn_send.TabIndex = 9;
-            this.btn_send.Text = "发送消息";
-            this.btn_send.UseVisualStyleBackColor = true;
-            this.btn_send.Click += new System.EventHandler(this.btn_send_Click);
+            this.loader.Location = new System.Drawing.Point(40, 70);
+            this.loader.Name = "loader";
+            this.loader.Size = new System.Drawing.Size(121, 38);
+            this.loader.TabIndex = 1;
+            this.loader.Text = "加载";
+            this.loader.UseVisualStyleBackColor = true;
+            this.loader.Click += new System.EventHandler(this.loader_Click);
             // 
             // MainForm
             // 
@@ -1518,6 +1541,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -1642,6 +1666,8 @@
         private System.Windows.Forms.Button btn_send;
         private System.Windows.Forms.RichTextBox SendBox;
         private System.Windows.Forms.ListBox lbOnline;
+        private System.Windows.Forms.ComboBox ConfigAdr;
+        private System.Windows.Forms.Button loader;
     }
 }
 
