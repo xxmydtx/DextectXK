@@ -35,71 +35,13 @@
             this.skinPanel5 = new CCWin.SkinControl.SkinPanel();
             this.panel35 = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
-            this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel34 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
-            this.skinPanel3 = new CCWin.SkinControl.SkinPanel();
-            this.userLantern3 = new HslCommunication.Controls.UserLantern();
-            this.userLantern2 = new HslCommunication.Controls.UserLantern();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.userLantern1 = new HslCommunication.Controls.UserLantern();
-            this.skinPanel4 = new CCWin.SkinControl.SkinPanel();
-            this.userLantern17 = new HslCommunication.Controls.UserLantern();
-            this.userLantern15 = new HslCommunication.Controls.UserLantern();
-            this.userLantern16 = new HslCommunication.Controls.UserLantern();
-            this.userLantern10 = new HslCommunication.Controls.UserLantern();
-            this.userLantern13 = new HslCommunication.Controls.UserLantern();
-            this.userLantern14 = new HslCommunication.Controls.UserLantern();
-            this.userLantern12 = new HslCommunication.Controls.UserLantern();
-            this.userLantern9 = new HslCommunication.Controls.UserLantern();
-            this.userLantern7 = new HslCommunication.Controls.UserLantern();
-            this.userLantern8 = new HslCommunication.Controls.UserLantern();
-            this.userLantern11 = new HslCommunication.Controls.UserLantern();
-            this.userLantern6 = new HslCommunication.Controls.UserLantern();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.label28 = new System.Windows.Forms.Label();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.label27 = new System.Windows.Forms.Label();
-            this.userLantern5 = new HslCommunication.Controls.UserLantern();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.label26 = new System.Windows.Forms.Label();
-            this.userLantern4 = new HslCommunication.Controls.UserLantern();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.skinPanel9 = new CCWin.SkinControl.SkinPanel();
+            this.btn_start = new System.Windows.Forms.Button();
+            this.detectingStop = new CCWin.SkinControl.SkinPanel();
             this.stopStatus = new System.Windows.Forms.Label();
-            this.detectingStatus = new CCWin.SkinControl.SkinPanel();
+            this.detecting = new CCWin.SkinControl.SkinPanel();
             this.label35 = new System.Windows.Forms.Label();
             this.panelNetConnect = new CCWin.SkinControl.SkinPanel();
             this.labelNetConnect = new System.Windows.Forms.Label();
@@ -132,7 +74,71 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.label36 = new System.Windows.Forms.Label();
+            this.userLantern18 = new HslCommunication.Controls.UserLantern();
+            this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label34 = new System.Windows.Forms.Label();
+            this.skinPanel3 = new CCWin.SkinControl.SkinPanel();
+            this.userLantern3 = new HslCommunication.Controls.UserLantern();
+            this.userLantern2 = new HslCommunication.Controls.UserLantern();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.userLantern1 = new HslCommunication.Controls.UserLantern();
+            this.skinPanel4 = new CCWin.SkinControl.SkinPanel();
+            this.userLantern17 = new HslCommunication.Controls.UserLantern();
+            this.userLantern16 = new HslCommunication.Controls.UserLantern();
+            this.userLantern12 = new HslCommunication.Controls.UserLantern();
+            this.userLantern13 = new HslCommunication.Controls.UserLantern();
+            this.userLantern15 = new HslCommunication.Controls.UserLantern();
+            this.userLantern11 = new HslCommunication.Controls.UserLantern();
+            this.userLantern14 = new HslCommunication.Controls.UserLantern();
+            this.userLantern10 = new HslCommunication.Controls.UserLantern();
+            this.userLantern9 = new HslCommunication.Controls.UserLantern();
+            this.userLantern7 = new HslCommunication.Controls.UserLantern();
+            this.userLantern6 = new HslCommunication.Controls.UserLantern();
+            this.userLantern5 = new HslCommunication.Controls.UserLantern();
+            this.userLantern4 = new HslCommunication.Controls.UserLantern();
+            this.userLantern8 = new HslCommunication.Controls.UserLantern();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btn_send = new System.Windows.Forms.Button();
             this.SendBox = new System.Windows.Forms.RichTextBox();
@@ -143,18 +149,29 @@
             this.txtIp = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.loader = new System.Windows.Forms.Button();
             this.ConfigAdr = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.loader = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.skinPanel5.SuspendLayout();
             this.panel35.SuspendLayout();
-            this.skinPanel2.SuspendLayout();
             this.panel34.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.detectingStop.SuspendLayout();
+            this.detecting.SuspendLayout();
+            this.panelNetConnect.SuspendLayout();
+            this.skinPanel6.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.skinPanel1.SuspendLayout();
+            this.panel36.SuspendLayout();
+            this.skinPanel2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.skinPanel3.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel18.SuspendLayout();
@@ -176,16 +193,6 @@
             this.panel22.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel16.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.skinPanel9.SuspendLayout();
-            this.detectingStatus.SuspendLayout();
-            this.panelNetConnect.SuspendLayout();
-            this.skinPanel6.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.skinPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -241,10 +248,7 @@
             this.skinPanel5.BackColor = System.Drawing.Color.White;
             this.skinPanel5.BorderColor = System.Drawing.Color.Black;
             this.skinPanel5.Controls.Add(this.panel35);
-            this.skinPanel5.Controls.Add(this.skinPanel2);
             this.skinPanel5.Controls.Add(this.panel34);
-            this.skinPanel5.Controls.Add(this.skinPanel3);
-            this.skinPanel5.Controls.Add(this.skinPanel4);
             this.skinPanel5.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel5.DownBack = null;
             this.skinPanel5.Location = new System.Drawing.Point(569, 191);
@@ -253,692 +257,84 @@
             this.skinPanel5.NormlBack = null;
             this.skinPanel5.Radius = 50;
             this.skinPanel5.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinPanel5.Size = new System.Drawing.Size(575, 335);
+            this.skinPanel5.Size = new System.Drawing.Size(575, 362);
             this.skinPanel5.TabIndex = 7;
             // 
             // panel35
             // 
-            this.panel35.BackColor = System.Drawing.Color.Red;
+            this.panel35.BackColor = System.Drawing.Color.Lime;
             this.panel35.Controls.Add(this.label30);
-            this.panel35.Location = new System.Drawing.Point(285, 281);
+            this.panel35.Location = new System.Drawing.Point(253, 53);
             this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(206, 42);
+            this.panel35.Size = new System.Drawing.Size(305, 268);
             this.panel35.TabIndex = 8;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label30.ForeColor = System.Drawing.SystemColors.Control;
-            this.label30.Location = new System.Drawing.Point(65, 10);
+            this.label30.Font = new System.Drawing.Font("宋体", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label30.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label30.Location = new System.Drawing.Point(98, 92);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(85, 24);
+            this.label30.Size = new System.Drawing.Size(118, 48);
             this.label30.TabIndex = 0;
-            this.label30.Text = "不合格";
-            // 
-            // skinPanel2
-            // 
-            this.skinPanel2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.skinPanel2.BorderColor = System.Drawing.Color.Black;
-            this.skinPanel2.Controls.Add(this.label9);
-            this.skinPanel2.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel2.DownBack = null;
-            this.skinPanel2.Location = new System.Drawing.Point(12, 3);
-            this.skinPanel2.MouseBack = null;
-            this.skinPanel2.Name = "skinPanel2";
-            this.skinPanel2.NormlBack = null;
-            this.skinPanel2.Radius = 50;
-            this.skinPanel2.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinPanel2.Size = new System.Drawing.Size(556, 45);
-            this.skinPanel2.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(203, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(149, 24);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "检 测 结 果";
+            this.label30.Text = "合格";
             // 
             // panel34
             // 
-            this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel34.BackColor = System.Drawing.Color.Silver;
             this.panel34.Controls.Add(this.label29);
-            this.panel34.Location = new System.Drawing.Point(79, 281);
+            this.panel34.Location = new System.Drawing.Point(19, 53);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(206, 42);
+            this.panel34.Size = new System.Drawing.Size(212, 268);
             this.panel34.TabIndex = 7;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label29.Location = new System.Drawing.Point(60, 9);
+            this.label29.Font = new System.Drawing.Font("宋体", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label29.Location = new System.Drawing.Point(14, 92);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(98, 24);
+            this.label29.Size = new System.Drawing.Size(192, 48);
             this.label29.TabIndex = 0;
             this.label29.Text = "总结果:";
-            // 
-            // skinPanel3
-            // 
-            this.skinPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel3.BorderColor = System.Drawing.Color.Black;
-            this.skinPanel3.Controls.Add(this.userLantern3);
-            this.skinPanel3.Controls.Add(this.userLantern2);
-            this.skinPanel3.Controls.Add(this.panel19);
-            this.skinPanel3.Controls.Add(this.panel18);
-            this.skinPanel3.Controls.Add(this.panel17);
-            this.skinPanel3.Controls.Add(this.panel15);
-            this.skinPanel3.Controls.Add(this.userLantern1);
-            this.skinPanel3.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel3.DownBack = null;
-            this.skinPanel3.Location = new System.Drawing.Point(33, 48);
-            this.skinPanel3.MouseBack = null;
-            this.skinPanel3.Name = "skinPanel3";
-            this.skinPanel3.NormlBack = null;
-            this.skinPanel3.Size = new System.Drawing.Size(248, 233);
-            this.skinPanel3.TabIndex = 1;
-            // 
-            // userLantern3
-            // 
-            this.userLantern3.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern3.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern3.Location = new System.Drawing.Point(113, 91);
-            this.userLantern3.Margin = new System.Windows.Forms.Padding(20);
-            this.userLantern3.Name = "userLantern3";
-            this.userLantern3.Size = new System.Drawing.Size(25, 27);
-            this.userLantern3.TabIndex = 9;
-            // 
-            // userLantern2
-            // 
-            this.userLantern2.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern2.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern2.Location = new System.Drawing.Point(113, 63);
-            this.userLantern2.Margin = new System.Windows.Forms.Padding(12);
-            this.userLantern2.Name = "userLantern2";
-            this.userLantern2.Size = new System.Drawing.Size(25, 27);
-            this.userLantern2.TabIndex = 8;
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.Silver;
-            this.panel19.Controls.Add(this.label14);
-            this.panel19.Location = new System.Drawing.Point(0, 91);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(112, 27);
-            this.panel19.TabIndex = 7;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(5, 5);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(104, 16);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "按键丝印亮度";
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.Silver;
-            this.panel18.Controls.Add(this.label13);
-            this.panel18.Location = new System.Drawing.Point(0, 63);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(112, 27);
-            this.panel18.TabIndex = 6;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.Location = new System.Drawing.Point(6, 5);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(104, 16);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "按键丝印位置";
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.Silver;
-            this.panel17.Controls.Add(this.label12);
-            this.panel17.Location = new System.Drawing.Point(0, 35);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(112, 27);
-            this.panel17.TabIndex = 5;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.Location = new System.Drawing.Point(6, 6);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(104, 16);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "按键丝印形状";
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel15.Controls.Add(this.label10);
-            this.panel15.Location = new System.Drawing.Point(0, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(247, 34);
-            this.panel15.TabIndex = 0;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.Location = new System.Drawing.Point(92, 6);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 24);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "外观";
-            // 
-            // userLantern1
-            // 
-            this.userLantern1.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern1.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern1.Location = new System.Drawing.Point(113, 35);
-            this.userLantern1.Margin = new System.Windows.Forms.Padding(7);
-            this.userLantern1.Name = "userLantern1";
-            this.userLantern1.Size = new System.Drawing.Size(25, 27);
-            this.userLantern1.TabIndex = 4;
-            // 
-            // skinPanel4
-            // 
-            this.skinPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.skinPanel4.BorderColor = System.Drawing.Color.Black;
-            this.skinPanel4.Controls.Add(this.userLantern17);
-            this.skinPanel4.Controls.Add(this.userLantern15);
-            this.skinPanel4.Controls.Add(this.userLantern16);
-            this.skinPanel4.Controls.Add(this.userLantern10);
-            this.skinPanel4.Controls.Add(this.userLantern13);
-            this.skinPanel4.Controls.Add(this.userLantern14);
-            this.skinPanel4.Controls.Add(this.userLantern12);
-            this.skinPanel4.Controls.Add(this.userLantern9);
-            this.skinPanel4.Controls.Add(this.userLantern7);
-            this.skinPanel4.Controls.Add(this.userLantern8);
-            this.skinPanel4.Controls.Add(this.userLantern11);
-            this.skinPanel4.Controls.Add(this.userLantern6);
-            this.skinPanel4.Controls.Add(this.panel20);
-            this.skinPanel4.Controls.Add(this.panel33);
-            this.skinPanel4.Controls.Add(this.panel32);
-            this.skinPanel4.Controls.Add(this.userLantern5);
-            this.skinPanel4.Controls.Add(this.panel31);
-            this.skinPanel4.Controls.Add(this.userLantern4);
-            this.skinPanel4.Controls.Add(this.panel30);
-            this.skinPanel4.Controls.Add(this.panel29);
-            this.skinPanel4.Controls.Add(this.panel28);
-            this.skinPanel4.Controls.Add(this.panel27);
-            this.skinPanel4.Controls.Add(this.panel26);
-            this.skinPanel4.Controls.Add(this.panel25);
-            this.skinPanel4.Controls.Add(this.panel24);
-            this.skinPanel4.Controls.Add(this.panel23);
-            this.skinPanel4.Controls.Add(this.panel22);
-            this.skinPanel4.Controls.Add(this.panel21);
-            this.skinPanel4.Controls.Add(this.panel16);
-            this.skinPanel4.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel4.DownBack = null;
-            this.skinPanel4.Location = new System.Drawing.Point(296, 47);
-            this.skinPanel4.MouseBack = null;
-            this.skinPanel4.Name = "skinPanel4";
-            this.skinPanel4.NormlBack = null;
-            this.skinPanel4.Size = new System.Drawing.Size(248, 233);
-            this.skinPanel4.TabIndex = 2;
-            // 
-            // userLantern17
-            // 
-            this.userLantern17.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern17.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern17.Location = new System.Drawing.Point(211, 204);
-            this.userLantern17.Margin = new System.Windows.Forms.Padding(153);
-            this.userLantern17.Name = "userLantern17";
-            this.userLantern17.Size = new System.Drawing.Size(25, 27);
-            this.userLantern17.TabIndex = 38;
-            // 
-            // userLantern15
-            // 
-            this.userLantern15.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern15.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern15.Location = new System.Drawing.Point(211, 148);
-            this.userLantern15.Margin = new System.Windows.Forms.Padding(92);
-            this.userLantern15.Name = "userLantern15";
-            this.userLantern15.Size = new System.Drawing.Size(25, 27);
-            this.userLantern15.TabIndex = 36;
-            // 
-            // userLantern16
-            // 
-            this.userLantern16.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern16.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern16.Location = new System.Drawing.Point(211, 176);
-            this.userLantern16.Margin = new System.Windows.Forms.Padding(153);
-            this.userLantern16.Name = "userLantern16";
-            this.userLantern16.Size = new System.Drawing.Size(25, 27);
-            this.userLantern16.TabIndex = 37;
-            // 
-            // userLantern10
-            // 
-            this.userLantern10.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern10.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern10.Location = new System.Drawing.Point(86, 204);
-            this.userLantern10.Margin = new System.Windows.Forms.Padding(92);
-            this.userLantern10.Name = "userLantern10";
-            this.userLantern10.Size = new System.Drawing.Size(25, 27);
-            this.userLantern10.TabIndex = 32;
-            // 
-            // userLantern13
-            // 
-            this.userLantern13.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern13.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern13.Location = new System.Drawing.Point(211, 120);
-            this.userLantern13.Margin = new System.Windows.Forms.Padding(92);
-            this.userLantern13.Name = "userLantern13";
-            this.userLantern13.Size = new System.Drawing.Size(25, 27);
-            this.userLantern13.TabIndex = 35;
-            // 
-            // userLantern14
-            // 
-            this.userLantern14.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern14.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern14.Location = new System.Drawing.Point(211, 64);
-            this.userLantern14.Margin = new System.Windows.Forms.Padding(153);
-            this.userLantern14.Name = "userLantern14";
-            this.userLantern14.Size = new System.Drawing.Size(25, 27);
-            this.userLantern14.TabIndex = 35;
-            // 
-            // userLantern12
-            // 
-            this.userLantern12.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern12.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern12.Location = new System.Drawing.Point(211, 92);
-            this.userLantern12.Margin = new System.Windows.Forms.Padding(92);
-            this.userLantern12.Name = "userLantern12";
-            this.userLantern12.Size = new System.Drawing.Size(25, 27);
-            this.userLantern12.TabIndex = 34;
-            // 
-            // userLantern9
-            // 
-            this.userLantern9.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern9.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern9.Location = new System.Drawing.Point(86, 176);
-            this.userLantern9.Margin = new System.Windows.Forms.Padding(55);
-            this.userLantern9.Name = "userLantern9";
-            this.userLantern9.Size = new System.Drawing.Size(25, 27);
-            this.userLantern9.TabIndex = 31;
-            // 
-            // userLantern7
-            // 
-            this.userLantern7.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern7.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern7.Location = new System.Drawing.Point(86, 148);
-            this.userLantern7.Margin = new System.Windows.Forms.Padding(33);
-            this.userLantern7.Name = "userLantern7";
-            this.userLantern7.Size = new System.Drawing.Size(25, 27);
-            this.userLantern7.TabIndex = 13;
-            // 
-            // userLantern8
-            // 
-            this.userLantern8.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern8.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern8.Location = new System.Drawing.Point(86, 92);
-            this.userLantern8.Margin = new System.Windows.Forms.Padding(33);
-            this.userLantern8.Name = "userLantern8";
-            this.userLantern8.Size = new System.Drawing.Size(25, 27);
-            this.userLantern8.TabIndex = 14;
-            // 
-            // userLantern11
-            // 
-            this.userLantern11.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern11.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern11.Location = new System.Drawing.Point(211, 36);
-            this.userLantern11.Margin = new System.Windows.Forms.Padding(92);
-            this.userLantern11.Name = "userLantern11";
-            this.userLantern11.Size = new System.Drawing.Size(25, 27);
-            this.userLantern11.TabIndex = 33;
-            // 
-            // userLantern6
-            // 
-            this.userLantern6.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern6.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern6.Location = new System.Drawing.Point(86, 120);
-            this.userLantern6.Margin = new System.Windows.Forms.Padding(33);
-            this.userLantern6.Name = "userLantern6";
-            this.userLantern6.Size = new System.Drawing.Size(25, 27);
-            this.userLantern6.TabIndex = 12;
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.Silver;
-            this.panel20.Controls.Add(this.label15);
-            this.panel20.Location = new System.Drawing.Point(0, 36);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(83, 27);
-            this.panel20.TabIndex = 6;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.Location = new System.Drawing.Point(6, 6);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(72, 16);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "工作电流";
-            // 
-            // panel33
-            // 
-            this.panel33.BackColor = System.Drawing.Color.Silver;
-            this.panel33.Controls.Add(this.label28);
-            this.panel33.Location = new System.Drawing.Point(126, 204);
-            this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(83, 27);
-            this.panel33.TabIndex = 30;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label28.Location = new System.Drawing.Point(14, 6);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(56, 16);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "BACK键";
-            // 
-            // panel32
-            // 
-            this.panel32.BackColor = System.Drawing.Color.Silver;
-            this.panel32.Controls.Add(this.label27);
-            this.panel32.Location = new System.Drawing.Point(126, 176);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(83, 27);
-            this.panel32.TabIndex = 29;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label27.Location = new System.Drawing.Point(19, 6);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(48, 16);
-            this.label27.TabIndex = 0;
-            this.label27.Text = "音量-";
-            // 
-            // userLantern5
-            // 
-            this.userLantern5.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern5.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern5.Location = new System.Drawing.Point(86, 64);
-            this.userLantern5.Margin = new System.Windows.Forms.Padding(33);
-            this.userLantern5.Name = "userLantern5";
-            this.userLantern5.Size = new System.Drawing.Size(25, 27);
-            this.userLantern5.TabIndex = 11;
-            // 
-            // panel31
-            // 
-            this.panel31.BackColor = System.Drawing.Color.Silver;
-            this.panel31.Controls.Add(this.label26);
-            this.panel31.Location = new System.Drawing.Point(126, 148);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(83, 27);
-            this.panel31.TabIndex = 28;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label26.Location = new System.Drawing.Point(13, 6);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(56, 16);
-            this.label26.TabIndex = 0;
-            this.label26.Text = "下一曲";
-            // 
-            // userLantern4
-            // 
-            this.userLantern4.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern4.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern4.Location = new System.Drawing.Point(86, 36);
-            this.userLantern4.Margin = new System.Windows.Forms.Padding(33);
-            this.userLantern4.Name = "userLantern4";
-            this.userLantern4.Size = new System.Drawing.Size(25, 27);
-            this.userLantern4.TabIndex = 10;
-            // 
-            // panel30
-            // 
-            this.panel30.BackColor = System.Drawing.Color.Silver;
-            this.panel30.Controls.Add(this.label25);
-            this.panel30.Location = new System.Drawing.Point(126, 120);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(83, 27);
-            this.panel30.TabIndex = 27;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label25.Location = new System.Drawing.Point(14, 6);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(56, 16);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "HOME键";
-            // 
-            // panel29
-            // 
-            this.panel29.BackColor = System.Drawing.Color.Silver;
-            this.panel29.Controls.Add(this.label24);
-            this.panel29.Location = new System.Drawing.Point(126, 92);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(83, 27);
-            this.panel29.TabIndex = 26;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label24.Location = new System.Drawing.Point(1, 6);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(80, 16);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "按键亮度-";
-            // 
-            // panel28
-            // 
-            this.panel28.BackColor = System.Drawing.Color.Silver;
-            this.panel28.Controls.Add(this.label23);
-            this.panel28.Location = new System.Drawing.Point(126, 64);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(83, 27);
-            this.panel28.TabIndex = 25;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label23.Location = new System.Drawing.Point(1, 6);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(80, 16);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "屏幕亮度-";
-            // 
-            // panel27
-            // 
-            this.panel27.BackColor = System.Drawing.Color.Silver;
-            this.panel27.Controls.Add(this.label22);
-            this.panel27.Location = new System.Drawing.Point(126, 36);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(83, 27);
-            this.panel27.TabIndex = 23;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label22.Location = new System.Drawing.Point(13, 6);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(56, 16);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "暗电流";
-            // 
-            // panel26
-            // 
-            this.panel26.BackColor = System.Drawing.Color.Silver;
-            this.panel26.Controls.Add(this.label21);
-            this.panel26.Location = new System.Drawing.Point(0, 204);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(83, 27);
-            this.panel26.TabIndex = 16;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label21.Location = new System.Drawing.Point(12, 6);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(56, 16);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "电源键";
-            // 
-            // panel25
-            // 
-            this.panel25.BackColor = System.Drawing.Color.Silver;
-            this.panel25.Controls.Add(this.label20);
-            this.panel25.Location = new System.Drawing.Point(0, 176);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(83, 27);
-            this.panel25.TabIndex = 15;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label20.Location = new System.Drawing.Point(19, 6);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(48, 16);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "音量+";
-            // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.Silver;
-            this.panel24.Controls.Add(this.label19);
-            this.panel24.Location = new System.Drawing.Point(0, 148);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(83, 27);
-            this.panel24.TabIndex = 14;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label19.Location = new System.Drawing.Point(12, 6);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(56, 16);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "上一曲";
-            // 
-            // panel23
-            // 
-            this.panel23.BackColor = System.Drawing.Color.Silver;
-            this.panel23.Controls.Add(this.label18);
-            this.panel23.Location = new System.Drawing.Point(0, 120);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(83, 27);
-            this.panel23.TabIndex = 13;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label18.Location = new System.Drawing.Point(13, 6);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(56, 16);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "触摸屏";
-            // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.Silver;
-            this.panel22.Controls.Add(this.label17);
-            this.panel22.Location = new System.Drawing.Point(0, 92);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(83, 27);
-            this.panel22.TabIndex = 12;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label17.Location = new System.Drawing.Point(2, 6);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(80, 16);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "按键亮度+";
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.Silver;
-            this.panel21.Controls.Add(this.label16);
-            this.panel21.Location = new System.Drawing.Point(0, 64);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(83, 27);
-            this.panel21.TabIndex = 11;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label16.Location = new System.Drawing.Point(2, 6);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(80, 16);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "屏幕亮度+";
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel16.Controls.Add(this.label11);
-            this.panel16.Location = new System.Drawing.Point(0, 0);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(247, 34);
-            this.panel16.TabIndex = 0;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.Location = new System.Drawing.Point(92, 6);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 24);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "功能";
             // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.White;
-            this.panel14.Controls.Add(this.skinPanel9);
-            this.panel14.Controls.Add(this.detectingStatus);
+            this.panel14.Controls.Add(this.btn_start);
+            this.panel14.Controls.Add(this.detectingStop);
+            this.panel14.Controls.Add(this.detecting);
             this.panel14.Controls.Add(this.panelNetConnect);
             this.panel14.Controls.Add(this.skinPanel6);
-            this.panel14.Location = new System.Drawing.Point(0, 531);
+            this.panel14.Location = new System.Drawing.Point(0, 559);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(1147, 71);
             this.panel14.TabIndex = 9;
             // 
-            // skinPanel9
+            // btn_start
             // 
-            this.skinPanel9.BackColor = System.Drawing.Color.Silver;
-            this.skinPanel9.BorderColor = System.Drawing.Color.Black;
-            this.skinPanel9.Controls.Add(this.stopStatus);
-            this.skinPanel9.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinPanel9.DownBack = null;
-            this.skinPanel9.Location = new System.Drawing.Point(868, 0);
-            this.skinPanel9.MouseBack = null;
-            this.skinPanel9.Name = "skinPanel9";
-            this.skinPanel9.NormlBack = null;
-            this.skinPanel9.Size = new System.Drawing.Size(172, 71);
-            this.skinPanel9.TabIndex = 3;
+            this.btn_start.Location = new System.Drawing.Point(498, 3);
+            this.btn_start.Name = "btn_start";
+            this.btn_start.Size = new System.Drawing.Size(144, 65);
+            this.btn_start.TabIndex = 5;
+            this.btn_start.Text = "开始检测";
+            this.btn_start.UseVisualStyleBackColor = true;
+            this.btn_start.Click += new System.EventHandler(this.btn_start_Click);
+            // 
+            // detectingStop
+            // 
+            this.detectingStop.BackColor = System.Drawing.Color.Silver;
+            this.detectingStop.BorderColor = System.Drawing.Color.Black;
+            this.detectingStop.Controls.Add(this.stopStatus);
+            this.detectingStop.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.detectingStop.DownBack = null;
+            this.detectingStop.Location = new System.Drawing.Point(868, 0);
+            this.detectingStop.MouseBack = null;
+            this.detectingStop.Name = "detectingStop";
+            this.detectingStop.NormlBack = null;
+            this.detectingStop.Size = new System.Drawing.Size(172, 71);
+            this.detectingStop.TabIndex = 3;
             // 
             // stopStatus
             // 
@@ -950,19 +346,19 @@
             this.stopStatus.TabIndex = 0;
             this.stopStatus.Text = "停止检测";
             // 
-            // detectingStatus
+            // detecting
             // 
-            this.detectingStatus.BackColor = System.Drawing.Color.Lime;
-            this.detectingStatus.BorderColor = System.Drawing.Color.Black;
-            this.detectingStatus.Controls.Add(this.label35);
-            this.detectingStatus.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.detectingStatus.DownBack = null;
-            this.detectingStatus.Location = new System.Drawing.Point(695, 0);
-            this.detectingStatus.MouseBack = null;
-            this.detectingStatus.Name = "detectingStatus";
-            this.detectingStatus.NormlBack = null;
-            this.detectingStatus.Size = new System.Drawing.Size(172, 71);
-            this.detectingStatus.TabIndex = 2;
+            this.detecting.BackColor = System.Drawing.Color.Lime;
+            this.detecting.BorderColor = System.Drawing.Color.Black;
+            this.detecting.Controls.Add(this.label35);
+            this.detecting.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.detecting.DownBack = null;
+            this.detecting.Location = new System.Drawing.Point(695, 0);
+            this.detecting.MouseBack = null;
+            this.detecting.Name = "detecting";
+            this.detecting.NormlBack = null;
+            this.detecting.Size = new System.Drawing.Size(172, 71);
+            this.detecting.TabIndex = 2;
             // 
             // label35
             // 
@@ -983,7 +379,7 @@
             this.panelNetConnect.Controls.Add(this.label32);
             this.panelNetConnect.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.panelNetConnect.DownBack = null;
-            this.panelNetConnect.Location = new System.Drawing.Point(268, 0);
+            this.panelNetConnect.Location = new System.Drawing.Point(174, 0);
             this.panelNetConnect.MouseBack = null;
             this.panelNetConnect.Name = "panelNetConnect";
             this.panelNetConnect.NormlBack = null;
@@ -1030,7 +426,7 @@
             this.skinPanel6.Controls.Add(this.label31);
             this.skinPanel6.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel6.DownBack = null;
-            this.skinPanel6.Location = new System.Drawing.Point(66, 0);
+            this.skinPanel6.Location = new System.Drawing.Point(2, 0);
             this.skinPanel6.MouseBack = null;
             this.skinPanel6.Name = "skinPanel6";
             this.skinPanel6.NormlBack = null;
@@ -1113,7 +509,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
@@ -1141,7 +537,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(603, 11);
+            this.label3.Location = new System.Drawing.Point(602, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 6;
@@ -1201,7 +597,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.label6);
@@ -1291,7 +687,13 @@
             // 
             this.skinPanel1.BackColor = System.Drawing.Color.White;
             this.skinPanel1.BorderColor = System.Drawing.Color.Black;
-            this.skinPanel1.Controls.Add(this.pictureBox1);
+            this.skinPanel1.Controls.Add(this.label39);
+            this.skinPanel1.Controls.Add(this.panel36);
+            this.skinPanel1.Controls.Add(this.userLantern18);
+            this.skinPanel1.Controls.Add(this.skinPanel2);
+            this.skinPanel1.Controls.Add(this.panel2);
+            this.skinPanel1.Controls.Add(this.skinPanel3);
+            this.skinPanel1.Controls.Add(this.skinPanel4);
             this.skinPanel1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel1.DownBack = null;
             this.skinPanel1.Location = new System.Drawing.Point(3, 191);
@@ -1300,18 +702,684 @@
             this.skinPanel1.NormlBack = null;
             this.skinPanel1.Radius = 50;
             this.skinPanel1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinPanel1.Size = new System.Drawing.Size(563, 331);
+            this.skinPanel1.Size = new System.Drawing.Size(563, 365);
             this.skinPanel1.TabIndex = 8;
             // 
-            // pictureBox1
+            // label39
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, 22);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(527, 286);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(351, 55);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(199, 20);
+            this.label39.TabIndex = 41;
+            this.label39.Text = "xxxx-xxxx-xxxx-xxxx";
+            // 
+            // panel36
+            // 
+            this.panel36.BackColor = System.Drawing.Color.Silver;
+            this.panel36.Controls.Add(this.label36);
+            this.panel36.Location = new System.Drawing.Point(251, 53);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(94, 27);
+            this.panel36.TabIndex = 8;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label36.Location = new System.Drawing.Point(6, 6);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(80, 16);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "产品编号:";
+            // 
+            // userLantern18
+            // 
+            this.userLantern18.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern18.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern18.Location = new System.Drawing.Point(109, 51);
+            this.userLantern18.Margin = new System.Windows.Forms.Padding(255);
+            this.userLantern18.Name = "userLantern18";
+            this.userLantern18.Size = new System.Drawing.Size(30, 27);
+            this.userLantern18.TabIndex = 40;
+            // 
+            // skinPanel2
+            // 
+            this.skinPanel2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.skinPanel2.BorderColor = System.Drawing.Color.Black;
+            this.skinPanel2.Controls.Add(this.label9);
+            this.skinPanel2.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinPanel2.DownBack = null;
+            this.skinPanel2.Location = new System.Drawing.Point(4, 3);
+            this.skinPanel2.MouseBack = null;
+            this.skinPanel2.Name = "skinPanel2";
+            this.skinPanel2.NormlBack = null;
+            this.skinPanel2.Radius = 50;
+            this.skinPanel2.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinPanel2.Size = new System.Drawing.Size(556, 45);
+            this.skinPanel2.TabIndex = 0;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label9.Location = new System.Drawing.Point(206, 10);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(149, 24);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "检 测 结 果";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.label34);
+            this.panel2.Location = new System.Drawing.Point(27, 51);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(83, 27);
+            this.panel2.TabIndex = 7;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label34.Location = new System.Drawing.Point(6, 6);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(72, 16);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "产品机型";
+            // 
+            // skinPanel3
+            // 
+            this.skinPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel3.BorderColor = System.Drawing.Color.Black;
+            this.skinPanel3.Controls.Add(this.userLantern3);
+            this.skinPanel3.Controls.Add(this.userLantern2);
+            this.skinPanel3.Controls.Add(this.panel19);
+            this.skinPanel3.Controls.Add(this.panel18);
+            this.skinPanel3.Controls.Add(this.panel17);
+            this.skinPanel3.Controls.Add(this.panel15);
+            this.skinPanel3.Controls.Add(this.userLantern1);
+            this.skinPanel3.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinPanel3.DownBack = null;
+            this.skinPanel3.Location = new System.Drawing.Point(27, 84);
+            this.skinPanel3.MouseBack = null;
+            this.skinPanel3.Name = "skinPanel3";
+            this.skinPanel3.NormlBack = null;
+            this.skinPanel3.Size = new System.Drawing.Size(248, 275);
+            this.skinPanel3.TabIndex = 1;
+            // 
+            // userLantern3
+            // 
+            this.userLantern3.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern3.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern3.Location = new System.Drawing.Point(117, 104);
+            this.userLantern3.Margin = new System.Windows.Forms.Padding(33);
+            this.userLantern3.Name = "userLantern3";
+            this.userLantern3.Size = new System.Drawing.Size(28, 27);
+            this.userLantern3.TabIndex = 9;
+            // 
+            // userLantern2
+            // 
+            this.userLantern2.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern2.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern2.Location = new System.Drawing.Point(117, 70);
+            this.userLantern2.Margin = new System.Windows.Forms.Padding(20);
+            this.userLantern2.Name = "userLantern2";
+            this.userLantern2.Size = new System.Drawing.Size(28, 27);
+            this.userLantern2.TabIndex = 8;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.Silver;
+            this.panel19.Controls.Add(this.label14);
+            this.panel19.Location = new System.Drawing.Point(0, 104);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(112, 27);
+            this.panel19.TabIndex = 7;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label14.Location = new System.Drawing.Point(5, 5);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(104, 16);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "按键丝印亮度";
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.Silver;
+            this.panel18.Controls.Add(this.label13);
+            this.panel18.Location = new System.Drawing.Point(0, 69);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(112, 27);
+            this.panel18.TabIndex = 6;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label13.Location = new System.Drawing.Point(6, 6);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(104, 16);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "按键丝印位置";
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.Silver;
+            this.panel17.Controls.Add(this.label12);
+            this.panel17.Location = new System.Drawing.Point(0, 35);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(112, 27);
+            this.panel17.TabIndex = 5;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label12.Location = new System.Drawing.Point(6, 6);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(104, 16);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "按键丝印形状";
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel15.Controls.Add(this.label10);
+            this.panel15.Location = new System.Drawing.Point(0, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(247, 34);
+            this.panel15.TabIndex = 0;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.Location = new System.Drawing.Point(93, 6);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(58, 24);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "外观";
+            // 
+            // userLantern1
+            // 
+            this.userLantern1.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern1.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern1.Location = new System.Drawing.Point(117, 35);
+            this.userLantern1.Margin = new System.Windows.Forms.Padding(12);
+            this.userLantern1.Name = "userLantern1";
+            this.userLantern1.Size = new System.Drawing.Size(28, 27);
+            this.userLantern1.TabIndex = 4;
+            // 
+            // skinPanel4
+            // 
+            this.skinPanel4.BackColor = System.Drawing.Color.Transparent;
+            this.skinPanel4.BorderColor = System.Drawing.Color.Black;
+            this.skinPanel4.Controls.Add(this.userLantern17);
+            this.skinPanel4.Controls.Add(this.userLantern16);
+            this.skinPanel4.Controls.Add(this.userLantern12);
+            this.skinPanel4.Controls.Add(this.userLantern13);
+            this.skinPanel4.Controls.Add(this.userLantern15);
+            this.skinPanel4.Controls.Add(this.userLantern11);
+            this.skinPanel4.Controls.Add(this.userLantern14);
+            this.skinPanel4.Controls.Add(this.userLantern10);
+            this.skinPanel4.Controls.Add(this.userLantern9);
+            this.skinPanel4.Controls.Add(this.userLantern7);
+            this.skinPanel4.Controls.Add(this.userLantern6);
+            this.skinPanel4.Controls.Add(this.userLantern5);
+            this.skinPanel4.Controls.Add(this.userLantern4);
+            this.skinPanel4.Controls.Add(this.userLantern8);
+            this.skinPanel4.Controls.Add(this.panel20);
+            this.skinPanel4.Controls.Add(this.panel33);
+            this.skinPanel4.Controls.Add(this.panel32);
+            this.skinPanel4.Controls.Add(this.panel31);
+            this.skinPanel4.Controls.Add(this.panel30);
+            this.skinPanel4.Controls.Add(this.panel29);
+            this.skinPanel4.Controls.Add(this.panel28);
+            this.skinPanel4.Controls.Add(this.panel27);
+            this.skinPanel4.Controls.Add(this.panel26);
+            this.skinPanel4.Controls.Add(this.panel25);
+            this.skinPanel4.Controls.Add(this.panel24);
+            this.skinPanel4.Controls.Add(this.panel23);
+            this.skinPanel4.Controls.Add(this.panel22);
+            this.skinPanel4.Controls.Add(this.panel21);
+            this.skinPanel4.Controls.Add(this.panel16);
+            this.skinPanel4.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinPanel4.DownBack = null;
+            this.skinPanel4.Location = new System.Drawing.Point(292, 84);
+            this.skinPanel4.MouseBack = null;
+            this.skinPanel4.Name = "skinPanel4";
+            this.skinPanel4.NormlBack = null;
+            this.skinPanel4.Size = new System.Drawing.Size(248, 275);
+            this.skinPanel4.TabIndex = 2;
+            // 
+            // userLantern17
+            // 
+            this.userLantern17.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern17.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern17.Location = new System.Drawing.Point(213, 247);
+            this.userLantern17.Margin = new System.Windows.Forms.Padding(255);
+            this.userLantern17.Name = "userLantern17";
+            this.userLantern17.Size = new System.Drawing.Size(28, 27);
+            this.userLantern17.TabIndex = 39;
+            // 
+            // userLantern16
+            // 
+            this.userLantern16.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern16.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern16.Location = new System.Drawing.Point(213, 210);
+            this.userLantern16.Margin = new System.Windows.Forms.Padding(255);
+            this.userLantern16.Name = "userLantern16";
+            this.userLantern16.Size = new System.Drawing.Size(28, 27);
+            this.userLantern16.TabIndex = 38;
+            // 
+            // userLantern12
+            // 
+            this.userLantern12.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern12.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern12.Location = new System.Drawing.Point(88, 175);
+            this.userLantern12.Margin = new System.Windows.Forms.Padding(153);
+            this.userLantern12.Name = "userLantern12";
+            this.userLantern12.Size = new System.Drawing.Size(28, 27);
+            this.userLantern12.TabIndex = 38;
+            // 
+            // userLantern13
+            // 
+            this.userLantern13.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern13.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern13.Location = new System.Drawing.Point(213, 175);
+            this.userLantern13.Margin = new System.Windows.Forms.Padding(255);
+            this.userLantern13.Name = "userLantern13";
+            this.userLantern13.Size = new System.Drawing.Size(28, 27);
+            this.userLantern13.TabIndex = 35;
+            // 
+            // userLantern15
+            // 
+            this.userLantern15.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern15.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern15.Location = new System.Drawing.Point(213, 138);
+            this.userLantern15.Margin = new System.Windows.Forms.Padding(255);
+            this.userLantern15.Name = "userLantern15";
+            this.userLantern15.Size = new System.Drawing.Size(28, 27);
+            this.userLantern15.TabIndex = 37;
+            // 
+            // userLantern11
+            // 
+            this.userLantern11.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern11.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern11.Location = new System.Drawing.Point(88, 210);
+            this.userLantern11.Margin = new System.Windows.Forms.Padding(153);
+            this.userLantern11.Name = "userLantern11";
+            this.userLantern11.Size = new System.Drawing.Size(28, 27);
+            this.userLantern11.TabIndex = 37;
+            // 
+            // userLantern14
+            // 
+            this.userLantern14.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern14.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern14.Location = new System.Drawing.Point(213, 103);
+            this.userLantern14.Margin = new System.Windows.Forms.Padding(255);
+            this.userLantern14.Name = "userLantern14";
+            this.userLantern14.Size = new System.Drawing.Size(28, 27);
+            this.userLantern14.TabIndex = 36;
+            // 
+            // userLantern10
+            // 
+            this.userLantern10.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern10.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern10.Location = new System.Drawing.Point(88, 247);
+            this.userLantern10.Margin = new System.Windows.Forms.Padding(153);
+            this.userLantern10.Name = "userLantern10";
+            this.userLantern10.Size = new System.Drawing.Size(28, 27);
+            this.userLantern10.TabIndex = 36;
+            // 
+            // userLantern9
+            // 
+            this.userLantern9.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern9.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern9.Location = new System.Drawing.Point(213, 35);
+            this.userLantern9.Margin = new System.Windows.Forms.Padding(153);
+            this.userLantern9.Name = "userLantern9";
+            this.userLantern9.Size = new System.Drawing.Size(28, 27);
+            this.userLantern9.TabIndex = 35;
+            // 
+            // userLantern7
+            // 
+            this.userLantern7.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern7.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern7.Location = new System.Drawing.Point(88, 138);
+            this.userLantern7.Margin = new System.Windows.Forms.Padding(92);
+            this.userLantern7.Name = "userLantern7";
+            this.userLantern7.Size = new System.Drawing.Size(28, 27);
+            this.userLantern7.TabIndex = 33;
+            // 
+            // userLantern6
+            // 
+            this.userLantern6.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern6.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern6.Location = new System.Drawing.Point(88, 103);
+            this.userLantern6.Margin = new System.Windows.Forms.Padding(55);
+            this.userLantern6.Name = "userLantern6";
+            this.userLantern6.Size = new System.Drawing.Size(28, 27);
+            this.userLantern6.TabIndex = 32;
+            // 
+            // userLantern5
+            // 
+            this.userLantern5.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern5.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern5.Location = new System.Drawing.Point(88, 70);
+            this.userLantern5.Margin = new System.Windows.Forms.Padding(33);
+            this.userLantern5.Name = "userLantern5";
+            this.userLantern5.Size = new System.Drawing.Size(28, 27);
+            this.userLantern5.TabIndex = 31;
+            // 
+            // userLantern4
+            // 
+            this.userLantern4.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern4.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern4.Location = new System.Drawing.Point(88, 35);
+            this.userLantern4.Margin = new System.Windows.Forms.Padding(20);
+            this.userLantern4.Name = "userLantern4";
+            this.userLantern4.Size = new System.Drawing.Size(28, 27);
+            this.userLantern4.TabIndex = 10;
+            // 
+            // userLantern8
+            // 
+            this.userLantern8.BackColor = System.Drawing.Color.Transparent;
+            this.userLantern8.LanternBackground = System.Drawing.Color.Lime;
+            this.userLantern8.Location = new System.Drawing.Point(213, 70);
+            this.userLantern8.Margin = new System.Windows.Forms.Padding(153);
+            this.userLantern8.Name = "userLantern8";
+            this.userLantern8.Size = new System.Drawing.Size(28, 27);
+            this.userLantern8.TabIndex = 34;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.Silver;
+            this.panel20.Controls.Add(this.label15);
+            this.panel20.Location = new System.Drawing.Point(0, 35);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(83, 27);
+            this.panel20.TabIndex = 6;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label15.Location = new System.Drawing.Point(6, 6);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(72, 16);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "工作电流";
+            // 
+            // panel33
+            // 
+            this.panel33.BackColor = System.Drawing.Color.Silver;
+            this.panel33.Controls.Add(this.label28);
+            this.panel33.Location = new System.Drawing.Point(126, 246);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(83, 27);
+            this.panel33.TabIndex = 30;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label28.Location = new System.Drawing.Point(14, 6);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(56, 16);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "BACK键";
+            // 
+            // panel32
+            // 
+            this.panel32.BackColor = System.Drawing.Color.Silver;
+            this.panel32.Controls.Add(this.label27);
+            this.panel32.Location = new System.Drawing.Point(126, 210);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(83, 27);
+            this.panel32.TabIndex = 29;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label27.Location = new System.Drawing.Point(19, 6);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(48, 16);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "音量-";
+            // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.Silver;
+            this.panel31.Controls.Add(this.label26);
+            this.panel31.Location = new System.Drawing.Point(126, 175);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(83, 27);
+            this.panel31.TabIndex = 28;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label26.Location = new System.Drawing.Point(13, 6);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(56, 16);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "下一曲";
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.Silver;
+            this.panel30.Controls.Add(this.label25);
+            this.panel30.Location = new System.Drawing.Point(126, 139);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(83, 27);
+            this.panel30.TabIndex = 27;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label25.Location = new System.Drawing.Point(14, 6);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(56, 16);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "HOME键";
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.Silver;
+            this.panel29.Controls.Add(this.label24);
+            this.panel29.Location = new System.Drawing.Point(126, 104);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(83, 27);
+            this.panel29.TabIndex = 26;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label24.Location = new System.Drawing.Point(1, 6);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(80, 16);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "按键亮度-";
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.Silver;
+            this.panel28.Controls.Add(this.label23);
+            this.panel28.Location = new System.Drawing.Point(126, 69);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(83, 27);
+            this.panel28.TabIndex = 25;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label23.Location = new System.Drawing.Point(1, 6);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(80, 16);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "屏幕亮度-";
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.Silver;
+            this.panel27.Controls.Add(this.label22);
+            this.panel27.Location = new System.Drawing.Point(126, 35);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(83, 27);
+            this.panel27.TabIndex = 23;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label22.Location = new System.Drawing.Point(13, 6);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(56, 16);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "暗电流";
+            // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.Silver;
+            this.panel26.Controls.Add(this.label21);
+            this.panel26.Location = new System.Drawing.Point(0, 246);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(83, 27);
+            this.panel26.TabIndex = 16;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label21.Location = new System.Drawing.Point(12, 6);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(56, 16);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "电源键";
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.Silver;
+            this.panel25.Controls.Add(this.label20);
+            this.panel25.Location = new System.Drawing.Point(0, 210);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(83, 27);
+            this.panel25.TabIndex = 15;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label20.Location = new System.Drawing.Point(19, 6);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(48, 16);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "音量+";
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.Silver;
+            this.panel24.Controls.Add(this.label19);
+            this.panel24.Location = new System.Drawing.Point(0, 175);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(83, 27);
+            this.panel24.TabIndex = 14;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label19.Location = new System.Drawing.Point(12, 6);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(56, 16);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "上一曲";
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.Color.Silver;
+            this.panel23.Controls.Add(this.label18);
+            this.panel23.Location = new System.Drawing.Point(0, 139);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(83, 27);
+            this.panel23.TabIndex = 13;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label18.Location = new System.Drawing.Point(13, 6);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(56, 16);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "触摸屏";
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.Silver;
+            this.panel22.Controls.Add(this.label17);
+            this.panel22.Location = new System.Drawing.Point(0, 104);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(83, 27);
+            this.panel22.TabIndex = 12;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label17.Location = new System.Drawing.Point(2, 6);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(80, 16);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "按键亮度+";
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.Silver;
+            this.panel21.Controls.Add(this.label16);
+            this.panel21.Location = new System.Drawing.Point(0, 69);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(83, 27);
+            this.panel21.TabIndex = 11;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label16.Location = new System.Drawing.Point(2, 6);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(80, 16);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "屏幕亮度+";
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel16.Controls.Add(this.label11);
+            this.panel16.Location = new System.Drawing.Point(0, 0);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(247, 34);
+            this.panel16.TabIndex = 0;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label11.Location = new System.Drawing.Point(96, 6);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 24);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "功能";
             // 
             // tabPage4
             // 
@@ -1415,6 +1483,16 @@
             this.tabPage2.Text = "参数配置";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // loader
+            // 
+            this.loader.Location = new System.Drawing.Point(40, 70);
+            this.loader.Name = "loader";
+            this.loader.Size = new System.Drawing.Size(121, 38);
+            this.loader.TabIndex = 1;
+            this.loader.Text = "加载";
+            this.loader.UseVisualStyleBackColor = true;
+            this.loader.Click += new System.EventHandler(this.loader_Click);
+            // 
             // ConfigAdr
             // 
             this.ConfigAdr.FormattingEnabled = true;
@@ -1453,16 +1531,6 @@
             this.label37.TabIndex = 10;
             this.label37.Text = "汽车多媒体中控平台检测系统";
             // 
-            // loader
-            // 
-            this.loader.Location = new System.Drawing.Point(40, 70);
-            this.loader.Name = "loader";
-            this.loader.Size = new System.Drawing.Size(121, 38);
-            this.loader.TabIndex = 1;
-            this.loader.Text = "加载";
-            this.loader.UseVisualStyleBackColor = true;
-            this.loader.Click += new System.EventHandler(this.loader_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1471,6 +1539,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl2.ResumeLayout(false);
@@ -1478,10 +1547,31 @@
             this.skinPanel5.ResumeLayout(false);
             this.panel35.ResumeLayout(false);
             this.panel35.PerformLayout();
-            this.skinPanel2.ResumeLayout(false);
-            this.skinPanel2.PerformLayout();
             this.panel34.ResumeLayout(false);
             this.panel34.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.detectingStop.ResumeLayout(false);
+            this.detectingStop.PerformLayout();
+            this.detecting.ResumeLayout(false);
+            this.detecting.PerformLayout();
+            this.panelNetConnect.ResumeLayout(false);
+            this.panelNetConnect.PerformLayout();
+            this.skinPanel6.ResumeLayout(false);
+            this.skinPanel6.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.skinPanel1.ResumeLayout(false);
+            this.skinPanel1.PerformLayout();
+            this.panel36.ResumeLayout(false);
+            this.panel36.PerformLayout();
+            this.skinPanel2.ResumeLayout(false);
+            this.skinPanel2.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.skinPanel3.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
@@ -1522,23 +1612,6 @@
             this.panel21.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.skinPanel9.ResumeLayout(false);
-            this.skinPanel9.PerformLayout();
-            this.detectingStatus.ResumeLayout(false);
-            this.detectingStatus.PerformLayout();
-            this.panelNetConnect.ResumeLayout(false);
-            this.panelNetConnect.PerformLayout();
-            this.skinPanel6.ResumeLayout(false);
-            this.skinPanel6.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.skinPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -1555,7 +1628,6 @@
         private System.Windows.Forms.Label clabel_SoftwareVersion;
         private System.Windows.Forms.Label clabel_AlgoriVersion;
         private System.Windows.Forms.Label Title;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private HslCommunication.Controls.UserLantern userLantern1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label8;
@@ -1623,9 +1695,9 @@
         private System.Windows.Forms.Panel panel34;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Panel panel14;
-        private CCWin.SkinControl.SkinPanel skinPanel9;
+        private CCWin.SkinControl.SkinPanel detectingStop;
         private System.Windows.Forms.Label stopStatus;
-        private CCWin.SkinControl.SkinPanel detectingStatus;
+        private CCWin.SkinControl.SkinPanel detecting;
         private System.Windows.Forms.Label label35;
         private CCWin.SkinControl.SkinPanel panelNetConnect;
         private System.Windows.Forms.Label labelNetConnect;
@@ -1643,22 +1715,6 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private HslCommunication.Controls.UserLantern userLantern3;
-        private HslCommunication.Controls.UserLantern userLantern2;
-        private HslCommunication.Controls.UserLantern userLantern17;
-        private HslCommunication.Controls.UserLantern userLantern16;
-        private HslCommunication.Controls.UserLantern userLantern15;
-        private HslCommunication.Controls.UserLantern userLantern10;
-        private HslCommunication.Controls.UserLantern userLantern13;
-        private HslCommunication.Controls.UserLantern userLantern14;
-        private HslCommunication.Controls.UserLantern userLantern12;
-        private HslCommunication.Controls.UserLantern userLantern9;
-        private HslCommunication.Controls.UserLantern userLantern7;
-        private HslCommunication.Controls.UserLantern userLantern8;
-        private HslCommunication.Controls.UserLantern userLantern11;
-        private HslCommunication.Controls.UserLantern userLantern6;
-        private HslCommunication.Controls.UserLantern userLantern5;
-        private HslCommunication.Controls.UserLantern userLantern4;
         private System.Windows.Forms.TextBox txtIp;
         private System.Windows.Forms.Button btn_Lisening;
         private System.Windows.Forms.TextBox txtport;
@@ -1668,6 +1724,29 @@
         private System.Windows.Forms.ListBox lbOnline;
         private System.Windows.Forms.ComboBox ConfigAdr;
         private System.Windows.Forms.Button loader;
+        private System.Windows.Forms.Button btn_start;
+        private HslCommunication.Controls.UserLantern userLantern3;
+        private HslCommunication.Controls.UserLantern userLantern2;
+        private HslCommunication.Controls.UserLantern userLantern4;
+        private HslCommunication.Controls.UserLantern userLantern17;
+        private HslCommunication.Controls.UserLantern userLantern16;
+        private HslCommunication.Controls.UserLantern userLantern12;
+        private HslCommunication.Controls.UserLantern userLantern13;
+        private HslCommunication.Controls.UserLantern userLantern15;
+        private HslCommunication.Controls.UserLantern userLantern11;
+        private HslCommunication.Controls.UserLantern userLantern14;
+        private HslCommunication.Controls.UserLantern userLantern10;
+        private HslCommunication.Controls.UserLantern userLantern9;
+        private HslCommunication.Controls.UserLantern userLantern7;
+        private HslCommunication.Controls.UserLantern userLantern6;
+        private HslCommunication.Controls.UserLantern userLantern5;
+        private HslCommunication.Controls.UserLantern userLantern8;
+        private HslCommunication.Controls.UserLantern userLantern18;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Panel panel36;
+        private System.Windows.Forms.Label label36;
     }
 }
 
