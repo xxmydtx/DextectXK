@@ -12,22 +12,24 @@ using System.Threading;
 using System.Net.Sockets;
 using System.IO;
 using System.Xml;
+using System.IO.Ports;
 
 namespace Detect_xk
 {
     public partial class MainForm : Form
     {
-        
+
         Thread threadWatch = null; // 负责监听客户端连接请求的 线程；
         Thread SocMain = null;
         Thread MainThread = null;
         Socket socketWatch = null;
         Socket sokConnection = null;
+        COM com = new COM();
 
         //配置
         string CurConfigAdr = null;
         XmlDocument XmlConfig = new XmlDocument();
-        string XmlConfigAdr = System.Environment.CurrentDirectory +  "\\config_load.xml" ; // xml配置文件地址
+        string XmlConfigAdr = System.Environment.CurrentDirectory + "\\config_load.xml"; // xml配置文件地址
         int Cnt = 0;
         int curCnt = 0;
 
@@ -39,24 +41,23 @@ namespace Detect_xk
         public static Status status = Status.WAIT_FOR_USER;
         public MainForm()
         {
-            
             InitializeComponent();
             // 获取所有配置文件
             ConfigInit();
-            // 加载Config文件
+            // 初始化COM口
             
             // 初始化网络连接
             TcpInit();
             // 开启主线程
             MainThread = new Thread(MainTd);
-            
+
         }
         void MainTd()
         {
             while (true)
             {
                 //完成一块板子的检测
-                if(curCnt == Cnt)
+                if (curCnt == Cnt)
                 {
                     status = Status.WAIT_FOR_USER;
                     btn_start.Enabled = true;
@@ -102,11 +103,11 @@ namespace Detect_xk
                     ConfigAdr.Items.Add(list[i].Name);
                 }
                 XmlConfig = XmlTools.readXml(XmlConfigAdr);
-                XmlNode root = XmlTools.getXmlNode(XmlConfig,"/last_used/last");
+                XmlNode root = XmlTools.getXmlNode(XmlConfig, "/last_used/last");
                 string name = root.InnerText;
-                for(int i = 0;i<list.Length;i++)
+                for (int i = 0; i < list.Length; i++)
                 {
-                    if(list[i].Name == name)
+                    if (list[i].Name == name)
                     {
                         ConfigAdr.Enabled = false;
                         CurConfigAdr = ConfigAdr.Text;
@@ -130,7 +131,7 @@ namespace Detect_xk
         /// <param name="adr"></param>
         private void load_Config(string adr)
         {
-            
+
             if (adr == null)
             {
                 MessageBox.Show("error ： 配置文件为空");
@@ -157,7 +158,7 @@ namespace Detect_xk
                 //修改当前config的xml文件路径
                 XmlNode root = XmlTools.getXmlNode(XmlConfig, "/last_used/last");
                 root.InnerText = ConfigAdr.Text;
-                XmlTools.writeXml(XmlConfig,XmlConfigAdr);
+                XmlTools.writeXml(XmlConfig, XmlConfigAdr);
             }
             else
             {
@@ -190,6 +191,15 @@ namespace Detect_xk
 
         }
         #endregion
+
+        #region COM初始化
+        void ComInit()
+        {
+            com.InitCom(com1_Name.Text, com1_Baud.Text, com1_Data.Text, com1_Hand.Text, com1_Stop.Text, ref com.com1);
+            com.InitCom(com2_Name.Text, com2_Baud.Text, com2_Data.Text, com2_Hand.Text, com2_Stop.Text, ref com.com2);
+        }
+        #endregion
+
         //-----------------------Socket------------------------//
         #region 通信协议
         /// <summary>
@@ -247,7 +257,6 @@ namespace Detect_xk
                     {
                         //主业务
                         string RecByte = System.Text.Encoding.Default.GetString(arrMsgRec);
-
                         ShowMsg(RecByte);
                     }
                     else
@@ -355,7 +364,7 @@ namespace Detect_xk
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btn_send_Click(object sender, EventArgs e)
+        private void btn_SocketSend_Click(object sender, EventArgs e)
         {
             string s = SendBox.Text;
             byte[] byteArray = System.Text.Encoding.Default.GetBytes(s);
@@ -369,9 +378,126 @@ namespace Detect_xk
             
             return false;
         }
+
         #endregion
 
-        
+        //--------------------串口处理事件---------------------//
+        #region COM1
+        private void btn_OpenCom1_Click(object sender, EventArgs e)
+        {
+            if(btn_OpenCom1.Text == "打开串口")
+            {
+                com.InitCom(com1_Name.Text, com1_Baud.Text, com1_Data.Text, com1_Hand.Text, com1_Stop.Text, ref com.com1);
+                com.com1.DataReceived += new SerialDataReceivedEventHandler(Com1Receive);
+                com.com1.Open();
+                com1_Name.Enabled = false;
+                com1_Baud.Enabled = false;
+                com1_Data.Enabled = false;
+                com1_Stop.Enabled = false;
+                com1_Hand.Enabled = false;
+                btn_OpenCom1.Text = "关闭串口";
+                btn_RefreshCom1.Enabled = false;
+            }
+            else if(btn_OpenCom1.Text == "关闭串口")
+            {
+                com.com1.Close();
+                com1_Name.Enabled = true;
+                com1_Baud.Enabled = true;
+                com1_Data.Enabled = true;
+                com1_Stop.Enabled = true;
+                com1_Hand.Enabled = true;
+                btn_OpenCom1.Text = "打开串口";
+                btn_RefreshCom1.Enabled = true;
+            }
+        }
+        private void btn_RefreshCom1_Click(object sender, EventArgs e)
+        {
+            string[] ArryPort = SerialPort.GetPortNames();
+            for(int i = 0;i<ArryPort.Length;i++)
+            {
+                com1_Name.Items.Add(ArryPort[i]);
+            }
+        }
+        private void btn_Com1Send_Click(object sender, EventArgs e)
+        {
+            string s = rBox_Com1Send.Text;
+            com.com1.Write(s);
+        }
+
+        private void Com1Receive(
+                       object sender,
+                       SerialDataReceivedEventArgs e)
+        {
+            SerialPort sp = (SerialPort)sender;
+            string indata = sp.ReadExisting();
+            this.Invoke(new Action(() =>
+            {
+                rBox_Com1Receive.Text += indata;
+            }));
+        }
+        #endregion
+        #region COM2
+        private void btn_OpenCom2_Click(object sender, EventArgs e)
+        {
+            if (btn_OpenCom2.Text == "打开串口")
+            {
+                com.InitCom(com2_Name.Text, com2_Baud.Text, com2_Data.Text, com2_Hand.Text, com2_Stop.Text, ref com.com2);
+                com.com2.DataReceived += new SerialDataReceivedEventHandler(Com2Receive);
+                com.com2.Open();
+                com2_Name.Enabled = false;
+                com2_Baud.Enabled = false;
+                com2_Data.Enabled = false;
+                com2_Stop.Enabled = false;
+                com2_Hand.Enabled = false;
+                btn_OpenCom2.Text = "关闭串口";
+                btn_RefreshCom2.Enabled = false;
+            }
+            else if (btn_OpenCom2.Text == "关闭串口")
+            {
+                com.com2.Close();
+                com2_Name.Enabled = true;
+                com2_Baud.Enabled = true;
+                com2_Data.Enabled = true;
+                com2_Stop.Enabled = true;
+                com2_Hand.Enabled = true;
+                btn_OpenCom2.Text = "打开串口";
+                btn_RefreshCom2.Enabled = true;
+            }
+        }
+        private void Com2Receive(
+                       object sender,
+                       SerialDataReceivedEventArgs e)
+        {
+            SerialPort sp = (SerialPort)sender;
+            string indata = sp.ReadExisting();
+            this.Invoke(new Action(() =>
+            {
+                rBox_Com2Receive.Text += indata;
+            }));
+        }
+
+        private void btn_RefreshCom2_Click(object sender, EventArgs e)
+        {
+            string[] ArryPort = SerialPort.GetPortNames();
+            for (int i = 0; i < ArryPort.Length; i++)
+            {
+                com2_Name.Items.Add(ArryPort[i]);
+            }
+        }
+
+        private void btn_Com2Send_Click(object sender, EventArgs e)
+        {
+            string s = rBox_Com2Send.Text;
+            com.com2.Write(s);
+        }
+        #endregion
+
+
+        //-----------------------数据库------------------------//
+        private void ConnectToDataBase_Click(object sender, EventArgs e)
+        {
+            DataBase.connectToDataBase(ref this.dataGridView);
+        }
     }
 }
 
