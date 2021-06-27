@@ -151,12 +151,19 @@ namespace Detect_xk
         #endregion
         public static void createrXmlFile()
         {
+           ;
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", "UTF-8", null));
+            xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", "gb2312", null));
             XmlElement root = xmlDoc.CreateElement("last_used");
             root.InnerText = "大屏001";
             xmlDoc.AppendChild(root);
-            xmlDoc.Save(Environment.CurrentDirectory + "/config_load.xml");
+            xmlDoc.Save(MainForm.Dir.FullName + "\\" + "test.xml");
         }
+        //结构体设计
+        //name string,struct[]
+        //所建立的文件名字，以及存储的数据结构体。
+        //我希望，每一次检测都将是独立的，然后对应独立的算法。
+        //这样整个流程的每一步都可以是独立的。但是他的算法独立性太弱了，目前看起来没办法把具体的算法写进配置文件中。因为前后有关联性，有关联性，就没办法设置如何去配置了。
+        //现在只考虑，配置每一步的位置。
     }
 }

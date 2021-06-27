@@ -78,6 +78,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arm.cs" />
     <Compile Include="COM.cs" />
     <Compile Include="DataBase.cs" />
     <Compile Include="MainForm.cs">

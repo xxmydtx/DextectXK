@@ -8,6 +8,7 @@ namespace Detect_xk
 {
     static class Program
     {
+        public static MainForm Ins;
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
@@ -16,7 +17,8 @@ namespace Detect_xk
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Ins = new MainForm();
+            Application.Run(Ins);
         }
     }
 }

@@ -34,8 +34,8 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.skinPanel5 = new CCWin.SkinControl.SkinPanel();
             this.label41 = new System.Windows.Forms.Label();
-            this.panel35 = new System.Windows.Forms.Panel();
-            this.label30 = new System.Windows.Forms.Label();
+            this.Panel_Result = new System.Windows.Forms.Panel();
+            this.Result_End = new System.Windows.Forms.Label();
             this.panel34 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
@@ -83,41 +83,41 @@
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.skinPanel3 = new CCWin.SkinControl.SkinPanel();
-            this.userLantern3 = new HslCommunication.Controls.UserLantern();
-            this.userLantern2 = new HslCommunication.Controls.UserLantern();
+            this.Result18 = new HslCommunication.Controls.UserLantern();
+            this.Result17 = new HslCommunication.Controls.UserLantern();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.userLantern1 = new HslCommunication.Controls.UserLantern();
+            this.Result16 = new HslCommunication.Controls.UserLantern();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel37 = new System.Windows.Forms.Panel();
             this.label40 = new System.Windows.Forms.Label();
             this.skinPanel4 = new CCWin.SkinControl.SkinPanel();
-            this.userLantern19 = new HslCommunication.Controls.UserLantern();
-            this.userLantern17 = new HslCommunication.Controls.UserLantern();
-            this.userLantern16 = new HslCommunication.Controls.UserLantern();
+            this.Result3 = new HslCommunication.Controls.UserLantern();
+            this.Result14 = new HslCommunication.Controls.UserLantern();
+            this.Result12 = new HslCommunication.Controls.UserLantern();
             this.panel31 = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
             this.panel28 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
-            this.userLantern12 = new HslCommunication.Controls.UserLantern();
-            this.userLantern13 = new HslCommunication.Controls.UserLantern();
-            this.userLantern15 = new HslCommunication.Controls.UserLantern();
-            this.userLantern11 = new HslCommunication.Controls.UserLantern();
-            this.userLantern14 = new HslCommunication.Controls.UserLantern();
-            this.userLantern10 = new HslCommunication.Controls.UserLantern();
-            this.userLantern9 = new HslCommunication.Controls.UserLantern();
-            this.userLantern7 = new HslCommunication.Controls.UserLantern();
-            this.userLantern6 = new HslCommunication.Controls.UserLantern();
-            this.userLantern5 = new HslCommunication.Controls.UserLantern();
-            this.userLantern4 = new HslCommunication.Controls.UserLantern();
-            this.userLantern8 = new HslCommunication.Controls.UserLantern();
+            this.Result9 = new HslCommunication.Controls.UserLantern();
+            this.Result10 = new HslCommunication.Controls.UserLantern();
+            this.Result8 = new HslCommunication.Controls.UserLantern();
+            this.Result13 = new HslCommunication.Controls.UserLantern();
+            this.Result4 = new HslCommunication.Controls.UserLantern();
+            this.Result15 = new HslCommunication.Controls.UserLantern();
+            this.Result2 = new HslCommunication.Controls.UserLantern();
+            this.Result7 = new HslCommunication.Controls.UserLantern();
+            this.Result11 = new HslCommunication.Controls.UserLantern();
+            this.Result5 = new HslCommunication.Controls.UserLantern();
+            this.Result1 = new HslCommunication.Controls.UserLantern();
+            this.Result6 = new HslCommunication.Controls.UserLantern();
             this.panel20 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.panel33 = new System.Windows.Forms.Panel();
@@ -208,7 +208,7 @@
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.skinPanel5.SuspendLayout();
-            this.panel35.SuspendLayout();
+            this.Panel_Result.SuspendLayout();
             this.panel34.SuspendLayout();
             this.panel36.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -305,7 +305,7 @@
             this.skinPanel5.BackColor = System.Drawing.Color.White;
             this.skinPanel5.BorderColor = System.Drawing.Color.Black;
             this.skinPanel5.Controls.Add(this.label41);
-            this.skinPanel5.Controls.Add(this.panel35);
+            this.skinPanel5.Controls.Add(this.Panel_Result);
             this.skinPanel5.Controls.Add(this.panel34);
             this.skinPanel5.Controls.Add(this.label39);
             this.skinPanel5.Controls.Add(this.panel36);
@@ -331,25 +331,24 @@
             this.label41.TabIndex = 43;
             this.label41.Text = "xxxx-xxxx-xxxx-xxxx";
             // 
-            // panel35
+            // Panel_Result
             // 
-            this.panel35.BackColor = System.Drawing.Color.Lime;
-            this.panel35.Controls.Add(this.label30);
-            this.panel35.Location = new System.Drawing.Point(255, 84);
-            this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(305, 268);
-            this.panel35.TabIndex = 8;
+            this.Panel_Result.BackColor = System.Drawing.Color.Silver;
+            this.Panel_Result.Controls.Add(this.Result_End);
+            this.Panel_Result.Location = new System.Drawing.Point(255, 84);
+            this.Panel_Result.Name = "Panel_Result";
+            this.Panel_Result.Size = new System.Drawing.Size(305, 268);
+            this.Panel_Result.TabIndex = 8;
             // 
-            // label30
+            // Result_End
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("宋体", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label30.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label30.Location = new System.Drawing.Point(94, 103);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(118, 48);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "合格";
+            this.Result_End.AutoSize = true;
+            this.Result_End.Font = new System.Drawing.Font("宋体", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Result_End.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Result_End.Location = new System.Drawing.Point(72, 105);
+            this.Result_End.Name = "Result_End";
+            this.Result_End.Size = new System.Drawing.Size(0, 48);
+            this.Result_End.TabIndex = 0;
             // 
             // panel34
             // 
@@ -851,12 +850,12 @@
             // 
             this.skinPanel3.BackColor = System.Drawing.Color.Transparent;
             this.skinPanel3.BorderColor = System.Drawing.Color.Black;
-            this.skinPanel3.Controls.Add(this.userLantern3);
-            this.skinPanel3.Controls.Add(this.userLantern2);
+            this.skinPanel3.Controls.Add(this.Result18);
+            this.skinPanel3.Controls.Add(this.Result17);
             this.skinPanel3.Controls.Add(this.panel19);
             this.skinPanel3.Controls.Add(this.panel18);
             this.skinPanel3.Controls.Add(this.panel17);
-            this.skinPanel3.Controls.Add(this.userLantern1);
+            this.skinPanel3.Controls.Add(this.Result16);
             this.skinPanel3.Controls.Add(this.panel15);
             this.skinPanel3.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel3.DownBack = null;
@@ -867,25 +866,25 @@
             this.skinPanel3.Size = new System.Drawing.Size(513, 63);
             this.skinPanel3.TabIndex = 1;
             // 
-            // userLantern3
+            // Result18
             // 
-            this.userLantern3.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern3.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern3.Location = new System.Drawing.Point(482, 35);
-            this.userLantern3.Margin = new System.Windows.Forms.Padding(33);
-            this.userLantern3.Name = "userLantern3";
-            this.userLantern3.Size = new System.Drawing.Size(28, 27);
-            this.userLantern3.TabIndex = 9;
+            this.Result18.BackColor = System.Drawing.Color.Transparent;
+            this.Result18.LanternBackground = System.Drawing.Color.Silver;
+            this.Result18.Location = new System.Drawing.Point(482, 35);
+            this.Result18.Margin = new System.Windows.Forms.Padding(33);
+            this.Result18.Name = "Result18";
+            this.Result18.Size = new System.Drawing.Size(28, 27);
+            this.Result18.TabIndex = 9;
             // 
-            // userLantern2
+            // Result17
             // 
-            this.userLantern2.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern2.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern2.Location = new System.Drawing.Point(296, 35);
-            this.userLantern2.Margin = new System.Windows.Forms.Padding(20);
-            this.userLantern2.Name = "userLantern2";
-            this.userLantern2.Size = new System.Drawing.Size(28, 27);
-            this.userLantern2.TabIndex = 8;
+            this.Result17.BackColor = System.Drawing.Color.Transparent;
+            this.Result17.LanternBackground = System.Drawing.Color.Silver;
+            this.Result17.Location = new System.Drawing.Point(296, 35);
+            this.Result17.Margin = new System.Windows.Forms.Padding(20);
+            this.Result17.Name = "Result17";
+            this.Result17.Size = new System.Drawing.Size(28, 27);
+            this.Result17.TabIndex = 8;
             // 
             // panel19
             // 
@@ -944,15 +943,15 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "按键丝印形状";
             // 
-            // userLantern1
+            // Result16
             // 
-            this.userLantern1.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern1.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern1.Location = new System.Drawing.Point(114, 35);
-            this.userLantern1.Margin = new System.Windows.Forms.Padding(12);
-            this.userLantern1.Name = "userLantern1";
-            this.userLantern1.Size = new System.Drawing.Size(28, 27);
-            this.userLantern1.TabIndex = 4;
+            this.Result16.BackColor = System.Drawing.Color.Transparent;
+            this.Result16.LanternBackground = System.Drawing.Color.Silver;
+            this.Result16.Location = new System.Drawing.Point(114, 35);
+            this.Result16.Margin = new System.Windows.Forms.Padding(12);
+            this.Result16.Name = "Result16";
+            this.Result16.Size = new System.Drawing.Size(28, 27);
+            this.Result16.TabIndex = 4;
             // 
             // panel15
             // 
@@ -996,24 +995,24 @@
             // 
             this.skinPanel4.BackColor = System.Drawing.Color.Transparent;
             this.skinPanel4.BorderColor = System.Drawing.Color.Black;
-            this.skinPanel4.Controls.Add(this.userLantern19);
-            this.skinPanel4.Controls.Add(this.userLantern17);
-            this.skinPanel4.Controls.Add(this.userLantern16);
+            this.skinPanel4.Controls.Add(this.Result3);
+            this.skinPanel4.Controls.Add(this.Result14);
+            this.skinPanel4.Controls.Add(this.Result12);
             this.skinPanel4.Controls.Add(this.panel31);
             this.skinPanel4.Controls.Add(this.panel28);
             this.skinPanel4.Controls.Add(this.panel27);
-            this.skinPanel4.Controls.Add(this.userLantern12);
-            this.skinPanel4.Controls.Add(this.userLantern13);
-            this.skinPanel4.Controls.Add(this.userLantern15);
-            this.skinPanel4.Controls.Add(this.userLantern11);
-            this.skinPanel4.Controls.Add(this.userLantern14);
-            this.skinPanel4.Controls.Add(this.userLantern10);
-            this.skinPanel4.Controls.Add(this.userLantern9);
-            this.skinPanel4.Controls.Add(this.userLantern7);
-            this.skinPanel4.Controls.Add(this.userLantern6);
-            this.skinPanel4.Controls.Add(this.userLantern5);
-            this.skinPanel4.Controls.Add(this.userLantern4);
-            this.skinPanel4.Controls.Add(this.userLantern8);
+            this.skinPanel4.Controls.Add(this.Result9);
+            this.skinPanel4.Controls.Add(this.Result10);
+            this.skinPanel4.Controls.Add(this.Result8);
+            this.skinPanel4.Controls.Add(this.Result13);
+            this.skinPanel4.Controls.Add(this.Result4);
+            this.skinPanel4.Controls.Add(this.Result15);
+            this.skinPanel4.Controls.Add(this.Result2);
+            this.skinPanel4.Controls.Add(this.Result7);
+            this.skinPanel4.Controls.Add(this.Result11);
+            this.skinPanel4.Controls.Add(this.Result5);
+            this.skinPanel4.Controls.Add(this.Result1);
+            this.skinPanel4.Controls.Add(this.Result6);
             this.skinPanel4.Controls.Add(this.panel20);
             this.skinPanel4.Controls.Add(this.panel33);
             this.skinPanel4.Controls.Add(this.panel32);
@@ -1035,35 +1034,35 @@
             this.skinPanel4.Size = new System.Drawing.Size(513, 227);
             this.skinPanel4.TabIndex = 2;
             // 
-            // userLantern19
+            // Result3
             // 
-            this.userLantern19.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern19.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern19.Location = new System.Drawing.Point(483, 35);
-            this.userLantern19.Margin = new System.Windows.Forms.Padding(255);
-            this.userLantern19.Name = "userLantern19";
-            this.userLantern19.Size = new System.Drawing.Size(28, 27);
-            this.userLantern19.TabIndex = 40;
+            this.Result3.BackColor = System.Drawing.Color.Transparent;
+            this.Result3.LanternBackground = System.Drawing.Color.Silver;
+            this.Result3.Location = new System.Drawing.Point(483, 35);
+            this.Result3.Margin = new System.Windows.Forms.Padding(255);
+            this.Result3.Name = "Result3";
+            this.Result3.Size = new System.Drawing.Size(28, 27);
+            this.Result3.TabIndex = 40;
             // 
-            // userLantern17
+            // Result14
             // 
-            this.userLantern17.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern17.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern17.Location = new System.Drawing.Point(296, 193);
-            this.userLantern17.Margin = new System.Windows.Forms.Padding(255);
-            this.userLantern17.Name = "userLantern17";
-            this.userLantern17.Size = new System.Drawing.Size(28, 27);
-            this.userLantern17.TabIndex = 39;
+            this.Result14.BackColor = System.Drawing.Color.Transparent;
+            this.Result14.LanternBackground = System.Drawing.Color.Silver;
+            this.Result14.Location = new System.Drawing.Point(296, 193);
+            this.Result14.Margin = new System.Windows.Forms.Padding(255);
+            this.Result14.Name = "Result14";
+            this.Result14.Size = new System.Drawing.Size(28, 27);
+            this.Result14.TabIndex = 39;
             // 
-            // userLantern16
+            // Result12
             // 
-            this.userLantern16.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern16.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern16.Location = new System.Drawing.Point(483, 153);
-            this.userLantern16.Margin = new System.Windows.Forms.Padding(255);
-            this.userLantern16.Name = "userLantern16";
-            this.userLantern16.Size = new System.Drawing.Size(28, 27);
-            this.userLantern16.TabIndex = 38;
+            this.Result12.BackColor = System.Drawing.Color.Transparent;
+            this.Result12.LanternBackground = System.Drawing.Color.Silver;
+            this.Result12.Location = new System.Drawing.Point(483, 153);
+            this.Result12.Margin = new System.Windows.Forms.Padding(255);
+            this.Result12.Name = "Result12";
+            this.Result12.Size = new System.Drawing.Size(28, 27);
+            this.Result12.TabIndex = 38;
             // 
             // panel31
             // 
@@ -1122,125 +1121,125 @@
             this.label22.TabIndex = 0;
             this.label22.Text = "暗电流";
             // 
-            // userLantern12
+            // Result9
             // 
-            this.userLantern12.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern12.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern12.Location = new System.Drawing.Point(483, 113);
-            this.userLantern12.Margin = new System.Windows.Forms.Padding(153);
-            this.userLantern12.Name = "userLantern12";
-            this.userLantern12.Size = new System.Drawing.Size(28, 27);
-            this.userLantern12.TabIndex = 38;
+            this.Result9.BackColor = System.Drawing.Color.Transparent;
+            this.Result9.LanternBackground = System.Drawing.Color.Silver;
+            this.Result9.Location = new System.Drawing.Point(483, 113);
+            this.Result9.Margin = new System.Windows.Forms.Padding(153);
+            this.Result9.Name = "Result9";
+            this.Result9.Size = new System.Drawing.Size(28, 27);
+            this.Result9.TabIndex = 38;
             // 
-            // userLantern13
+            // Result10
             // 
-            this.userLantern13.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern13.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern13.Location = new System.Drawing.Point(114, 153);
-            this.userLantern13.Margin = new System.Windows.Forms.Padding(255);
-            this.userLantern13.Name = "userLantern13";
-            this.userLantern13.Size = new System.Drawing.Size(28, 27);
-            this.userLantern13.TabIndex = 35;
+            this.Result10.BackColor = System.Drawing.Color.Transparent;
+            this.Result10.LanternBackground = System.Drawing.Color.Silver;
+            this.Result10.Location = new System.Drawing.Point(114, 153);
+            this.Result10.Margin = new System.Windows.Forms.Padding(255);
+            this.Result10.Name = "Result10";
+            this.Result10.Size = new System.Drawing.Size(28, 27);
+            this.Result10.TabIndex = 35;
             // 
-            // userLantern15
+            // Result8
             // 
-            this.userLantern15.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern15.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern15.Location = new System.Drawing.Point(296, 113);
-            this.userLantern15.Margin = new System.Windows.Forms.Padding(255);
-            this.userLantern15.Name = "userLantern15";
-            this.userLantern15.Size = new System.Drawing.Size(28, 27);
-            this.userLantern15.TabIndex = 37;
+            this.Result8.BackColor = System.Drawing.Color.Transparent;
+            this.Result8.LanternBackground = System.Drawing.Color.Silver;
+            this.Result8.Location = new System.Drawing.Point(296, 113);
+            this.Result8.Margin = new System.Windows.Forms.Padding(255);
+            this.Result8.Name = "Result8";
+            this.Result8.Size = new System.Drawing.Size(28, 27);
+            this.Result8.TabIndex = 37;
             // 
-            // userLantern11
+            // Result13
             // 
-            this.userLantern11.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern11.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern11.Location = new System.Drawing.Point(114, 193);
-            this.userLantern11.Margin = new System.Windows.Forms.Padding(153);
-            this.userLantern11.Name = "userLantern11";
-            this.userLantern11.Size = new System.Drawing.Size(28, 27);
-            this.userLantern11.TabIndex = 37;
+            this.Result13.BackColor = System.Drawing.Color.Transparent;
+            this.Result13.LanternBackground = System.Drawing.Color.Silver;
+            this.Result13.Location = new System.Drawing.Point(114, 193);
+            this.Result13.Margin = new System.Windows.Forms.Padding(153);
+            this.Result13.Name = "Result13";
+            this.Result13.Size = new System.Drawing.Size(28, 27);
+            this.Result13.TabIndex = 37;
             // 
-            // userLantern14
+            // Result4
             // 
-            this.userLantern14.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern14.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern14.Location = new System.Drawing.Point(114, 74);
-            this.userLantern14.Margin = new System.Windows.Forms.Padding(255);
-            this.userLantern14.Name = "userLantern14";
-            this.userLantern14.Size = new System.Drawing.Size(28, 27);
-            this.userLantern14.TabIndex = 36;
+            this.Result4.BackColor = System.Drawing.Color.Transparent;
+            this.Result4.LanternBackground = System.Drawing.Color.Silver;
+            this.Result4.Location = new System.Drawing.Point(114, 74);
+            this.Result4.Margin = new System.Windows.Forms.Padding(255);
+            this.Result4.Name = "Result4";
+            this.Result4.Size = new System.Drawing.Size(28, 27);
+            this.Result4.TabIndex = 36;
             // 
-            // userLantern10
+            // Result15
             // 
-            this.userLantern10.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern10.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern10.Location = new System.Drawing.Point(483, 193);
-            this.userLantern10.Margin = new System.Windows.Forms.Padding(153);
-            this.userLantern10.Name = "userLantern10";
-            this.userLantern10.Size = new System.Drawing.Size(28, 27);
-            this.userLantern10.TabIndex = 36;
+            this.Result15.BackColor = System.Drawing.Color.Transparent;
+            this.Result15.LanternBackground = System.Drawing.Color.Silver;
+            this.Result15.Location = new System.Drawing.Point(483, 193);
+            this.Result15.Margin = new System.Windows.Forms.Padding(153);
+            this.Result15.Name = "Result15";
+            this.Result15.Size = new System.Drawing.Size(28, 27);
+            this.Result15.TabIndex = 36;
             // 
-            // userLantern9
+            // Result2
             // 
-            this.userLantern9.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern9.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern9.Location = new System.Drawing.Point(296, 35);
-            this.userLantern9.Margin = new System.Windows.Forms.Padding(153);
-            this.userLantern9.Name = "userLantern9";
-            this.userLantern9.Size = new System.Drawing.Size(28, 27);
-            this.userLantern9.TabIndex = 35;
+            this.Result2.BackColor = System.Drawing.Color.Transparent;
+            this.Result2.LanternBackground = System.Drawing.Color.Silver;
+            this.Result2.Location = new System.Drawing.Point(296, 35);
+            this.Result2.Margin = new System.Windows.Forms.Padding(153);
+            this.Result2.Name = "Result2";
+            this.Result2.Size = new System.Drawing.Size(28, 27);
+            this.Result2.TabIndex = 35;
             // 
-            // userLantern7
+            // Result7
             // 
-            this.userLantern7.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern7.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern7.Location = new System.Drawing.Point(114, 113);
-            this.userLantern7.Margin = new System.Windows.Forms.Padding(92);
-            this.userLantern7.Name = "userLantern7";
-            this.userLantern7.Size = new System.Drawing.Size(28, 27);
-            this.userLantern7.TabIndex = 33;
+            this.Result7.BackColor = System.Drawing.Color.Transparent;
+            this.Result7.LanternBackground = System.Drawing.Color.Silver;
+            this.Result7.Location = new System.Drawing.Point(114, 113);
+            this.Result7.Margin = new System.Windows.Forms.Padding(92);
+            this.Result7.Name = "Result7";
+            this.Result7.Size = new System.Drawing.Size(28, 27);
+            this.Result7.TabIndex = 33;
             // 
-            // userLantern6
+            // Result11
             // 
-            this.userLantern6.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern6.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern6.Location = new System.Drawing.Point(296, 153);
-            this.userLantern6.Margin = new System.Windows.Forms.Padding(55);
-            this.userLantern6.Name = "userLantern6";
-            this.userLantern6.Size = new System.Drawing.Size(28, 27);
-            this.userLantern6.TabIndex = 32;
+            this.Result11.BackColor = System.Drawing.Color.Transparent;
+            this.Result11.LanternBackground = System.Drawing.Color.Silver;
+            this.Result11.Location = new System.Drawing.Point(296, 153);
+            this.Result11.Margin = new System.Windows.Forms.Padding(55);
+            this.Result11.Name = "Result11";
+            this.Result11.Size = new System.Drawing.Size(28, 27);
+            this.Result11.TabIndex = 32;
             // 
-            // userLantern5
+            // Result5
             // 
-            this.userLantern5.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern5.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern5.Location = new System.Drawing.Point(296, 74);
-            this.userLantern5.Margin = new System.Windows.Forms.Padding(33);
-            this.userLantern5.Name = "userLantern5";
-            this.userLantern5.Size = new System.Drawing.Size(28, 27);
-            this.userLantern5.TabIndex = 31;
+            this.Result5.BackColor = System.Drawing.Color.Transparent;
+            this.Result5.LanternBackground = System.Drawing.Color.Silver;
+            this.Result5.Location = new System.Drawing.Point(296, 74);
+            this.Result5.Margin = new System.Windows.Forms.Padding(33);
+            this.Result5.Name = "Result5";
+            this.Result5.Size = new System.Drawing.Size(28, 27);
+            this.Result5.TabIndex = 31;
             // 
-            // userLantern4
+            // Result1
             // 
-            this.userLantern4.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern4.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern4.Location = new System.Drawing.Point(114, 35);
-            this.userLantern4.Margin = new System.Windows.Forms.Padding(20);
-            this.userLantern4.Name = "userLantern4";
-            this.userLantern4.Size = new System.Drawing.Size(28, 27);
-            this.userLantern4.TabIndex = 10;
+            this.Result1.BackColor = System.Drawing.Color.Transparent;
+            this.Result1.LanternBackground = System.Drawing.Color.Silver;
+            this.Result1.Location = new System.Drawing.Point(114, 35);
+            this.Result1.Margin = new System.Windows.Forms.Padding(20);
+            this.Result1.Name = "Result1";
+            this.Result1.Size = new System.Drawing.Size(28, 27);
+            this.Result1.TabIndex = 10;
             // 
-            // userLantern8
+            // Result6
             // 
-            this.userLantern8.BackColor = System.Drawing.Color.Transparent;
-            this.userLantern8.LanternBackground = System.Drawing.Color.Lime;
-            this.userLantern8.Location = new System.Drawing.Point(483, 74);
-            this.userLantern8.Margin = new System.Windows.Forms.Padding(153);
-            this.userLantern8.Name = "userLantern8";
-            this.userLantern8.Size = new System.Drawing.Size(28, 27);
-            this.userLantern8.TabIndex = 34;
+            this.Result6.BackColor = System.Drawing.Color.Transparent;
+            this.Result6.LanternBackground = System.Drawing.Color.Silver;
+            this.Result6.Location = new System.Drawing.Point(483, 74);
+            this.Result6.Margin = new System.Windows.Forms.Padding(153);
+            this.Result6.Name = "Result6";
+            this.Result6.Size = new System.Drawing.Size(28, 27);
+            this.Result6.TabIndex = 34;
             // 
             // panel20
             // 
@@ -2202,8 +2201,8 @@
             this.tabPage3.ResumeLayout(false);
             this.skinPanel5.ResumeLayout(false);
             this.skinPanel5.PerformLayout();
-            this.panel35.ResumeLayout(false);
-            this.panel35.PerformLayout();
+            this.Panel_Result.ResumeLayout(false);
+            this.Panel_Result.PerformLayout();
             this.panel34.ResumeLayout(false);
             this.panel34.PerformLayout();
             this.panel36.ResumeLayout(false);
@@ -2294,7 +2293,7 @@
         private System.Windows.Forms.Label clabel_SoftwareVersion;
         private System.Windows.Forms.Label clabel_AlgoriVersion;
         private System.Windows.Forms.Label Title;
-        private HslCommunication.Controls.UserLantern userLantern1;
+        private HslCommunication.Controls.UserLantern Result16;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -2356,8 +2355,8 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Panel panel32;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Panel panel35;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Panel Panel_Result;
+        private System.Windows.Forms.Label Result_End;
         private System.Windows.Forms.Panel panel34;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Panel panel14;
@@ -2391,22 +2390,22 @@
         private System.Windows.Forms.ComboBox ConfigAdr;
         private System.Windows.Forms.Button loader;
         private System.Windows.Forms.Button btn_start;
-        private HslCommunication.Controls.UserLantern userLantern3;
-        private HslCommunication.Controls.UserLantern userLantern2;
-        private HslCommunication.Controls.UserLantern userLantern4;
-        private HslCommunication.Controls.UserLantern userLantern17;
-        private HslCommunication.Controls.UserLantern userLantern16;
-        private HslCommunication.Controls.UserLantern userLantern12;
-        private HslCommunication.Controls.UserLantern userLantern13;
-        private HslCommunication.Controls.UserLantern userLantern15;
-        private HslCommunication.Controls.UserLantern userLantern11;
-        private HslCommunication.Controls.UserLantern userLantern14;
-        private HslCommunication.Controls.UserLantern userLantern10;
-        private HslCommunication.Controls.UserLantern userLantern9;
-        private HslCommunication.Controls.UserLantern userLantern7;
-        private HslCommunication.Controls.UserLantern userLantern6;
-        private HslCommunication.Controls.UserLantern userLantern5;
-        private HslCommunication.Controls.UserLantern userLantern8;
+        private HslCommunication.Controls.UserLantern Result18;
+        private HslCommunication.Controls.UserLantern Result17;
+        private HslCommunication.Controls.UserLantern Result1;
+        private HslCommunication.Controls.UserLantern Result14;
+        private HslCommunication.Controls.UserLantern Result12;
+        private HslCommunication.Controls.UserLantern Result9;
+        private HslCommunication.Controls.UserLantern Result10;
+        private HslCommunication.Controls.UserLantern Result8;
+        private HslCommunication.Controls.UserLantern Result13;
+        private HslCommunication.Controls.UserLantern Result4;
+        private HslCommunication.Controls.UserLantern Result15;
+        private HslCommunication.Controls.UserLantern Result2;
+        private HslCommunication.Controls.UserLantern Result7;
+        private HslCommunication.Controls.UserLantern Result11;
+        private HslCommunication.Controls.UserLantern Result5;
+        private HslCommunication.Controls.UserLantern Result6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label39;
@@ -2459,7 +2458,7 @@
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Panel panel37;
         private System.Windows.Forms.Label label40;
-        private HslCommunication.Controls.UserLantern userLantern19;
+        private HslCommunication.Controls.UserLantern Result3;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Button ConnectToDataBase;
         private System.Windows.Forms.DataGridView dataGridView;
