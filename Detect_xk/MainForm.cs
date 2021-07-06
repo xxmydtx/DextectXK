@@ -13,6 +13,7 @@ using System.Net.Sockets;
 using System.IO;
 using System.Xml;
 using System.IO.Ports;
+using System.Runtime.InteropServices;
 
 namespace Detect_xk
 {
@@ -31,10 +32,14 @@ namespace Detect_xk
         public static DirectoryInfo Dir = new DirectoryInfo(System.Environment.CurrentDirectory + "\\Config");//当前读取或者生成的 《配置文件夹》 的绝对路径
         string CurConfigAdr = null;//当前使用的或者选中的《配置文件》的绝对路径
         string XmlConfigAdr = System.Environment.CurrentDirectory + "\\config_load.xml"; // 存放 《记录上一次所选择xml配置文件》 的地址
+        string XmlCntAdr = System.Environment.CurrentDirectory + "\\current_cnt.xml"; // 存放 《今日检测的所有数据》 的地址
+        string ErrorAdr = System.Environment.CurrentDirectory + "\\ErrorPic\\";
+        string PicAdr = System.Environment.CurrentDirectory + "\\pic\\";
 
         //配置信息
         XmlDocument XmlConfig = new XmlDocument();// 读取的是 《记录上一次所选择xml配置文件》 的这个xml，由这个来决定初始化哪个具体的配置文件
         XmlDocument cur_XmlConfig = new XmlDocument();// 具体加载进来的xml文件，需要从中读取当前要处理屏幕型号的信息
+        XmlDocument Today_CntConfig = new XmlDocument();
         int Cnt = 0;
         int curCnt = 0;
         //获取到的配置信息
@@ -42,18 +47,31 @@ namespace Detect_xk
 
 
         //计算的结果信息
-        bool[] Res = new bool[18];
+        Result[] Res = new Result[19];
         bool Res_End = true;
+
+        //记录一些静态信息
+        public static string[] CheckMsg = {
+            "软件版本","屏幕亮度+","工作电流","暗电流","按键亮度+","按键亮度-","屏幕亮度-","HOME键","上一曲","音量-","电源键","音量+","下一曲","BACK键","退出键","触摸屏","按键丝印形状","按键丝印位置","按键丝印亮度"
+        };
+        //当日的统计数据
+        int cntOK, cntNG;
 
         bool Is_Connected = false;
 
-        public string userName;
+        // 从登录界面获取的信息
+        public string userName = "10086";
         public string passWord;
+        public bool isIn = false;
 
         public static Status status = Status.WAIT_FOR_USER;
         public MainForm()
         {
             InitializeComponent();
+            this.AllInit();
+        }
+        public void AllInit()
+        {
             // 获取所有配置文件
             ConfigInit();
             // 初始化COM口
@@ -68,6 +86,10 @@ namespace Detect_xk
         {
             while (true)
             {
+                //配置是否为ROOT模式
+                if (isIn == true)
+                    RootConfig();
+
                 //完成一块板子的检测
                 if (curCnt == Cnt)
                 {
@@ -79,23 +101,35 @@ namespace Detect_xk
                     curCnt = 0;
                     if (Res_End == true)
                     {
-
+                        
                         this.Invoke(new Action(() =>
                         {
-                            Result_End.Location = new Point(92, 105);
+                            cntOK++;
+                            Result_End.Location = new Point(66, 134);
                             Result_End.Text = "合格";
                             Panel_Result.BackColor = Color.Lime;
+                            //更新xml文件,和界面
+                            var root1 = XmlTools.getXmlNode(Today_CntConfig, "/last_used/OK");
+                            this.cnt_TodayOK.Text = cntOK.ToString();
+                            root1.InnerText = cntOK.ToString();
+                            //
                         }));
                     }
                     else
                     {
                         this.Invoke(new Action(() =>
                         {
-                            Result_End.Location = new Point(72, 105);
+                            cntNG++;
+                            Result_End.Location = new Point(44, 134);
                             Result_End.Text = "不合格";
                             Panel_Result.BackColor = Color.Red;
+                            //更新xml文件,和界面
+                            var root1 = XmlTools.getXmlNode(Today_CntConfig, "/last_used/NG");
+                            this.cnt_TodayNG.Text = cntNG.ToString();
+                            root1.InnerText = cntNG.ToString();
                         }));
                     }
+                    XmlTools.writeXml(Today_CntConfig, XmlCntAdr);
                 }
                 switch (status)
                 {
@@ -116,8 +150,7 @@ namespace Detect_xk
                         curCnt++;
                         status = Status.SENDGING;
                         break;
-                }
-                
+                } 
             }
         }
 
@@ -128,12 +161,15 @@ namespace Detect_xk
             status = Status.START;
             btn_start.Enabled = false;
         }
+        /// <summary>
+        /// 在流程中改变每一步的颜色
+        /// </summary>
         private void show()
         {
             switch (curCnt)
             {
                 case 0:
-                    if(Res[curCnt] == true)
+                    if(Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -150,7 +186,7 @@ namespace Detect_xk
                     }
                     break;
                 case 1:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -167,7 +203,7 @@ namespace Detect_xk
                     }
                     break;
                 case 2:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -184,7 +220,7 @@ namespace Detect_xk
                     }
                     break;
                 case 3:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -201,7 +237,7 @@ namespace Detect_xk
                     }
                     break;
                 case 4:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -218,7 +254,7 @@ namespace Detect_xk
                     }
                     break;
                 case 5:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -235,7 +271,7 @@ namespace Detect_xk
                     }
                     break;
                 case 6:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -252,7 +288,7 @@ namespace Detect_xk
                     }
                     break;
                 case 7:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -269,7 +305,7 @@ namespace Detect_xk
                     }
                     break;
                 case 8:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -286,7 +322,7 @@ namespace Detect_xk
                     }
                     break;
                 case 9:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -303,7 +339,7 @@ namespace Detect_xk
                     }
                     break;
                 case 10:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -320,7 +356,7 @@ namespace Detect_xk
                     }
                     break;
                 case 11:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -337,7 +373,7 @@ namespace Detect_xk
                     }
                     break;
                 case 12:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -354,7 +390,7 @@ namespace Detect_xk
                     }
                     break;
                 case 13:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -371,7 +407,7 @@ namespace Detect_xk
                     }
                     break;
                 case 14:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -388,7 +424,7 @@ namespace Detect_xk
                     }
                     break;
                 case 15:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -405,7 +441,7 @@ namespace Detect_xk
                     }
                     break;
                 case 16:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -422,7 +458,7 @@ namespace Detect_xk
                     }
                     break;
                 case 17:
-                    if (Res[curCnt] == true)
+                    if (Res[curCnt] == Result.True)
                     {
                         this.Invoke(new Action(() =>
                         {
@@ -438,14 +474,71 @@ namespace Detect_xk
                         }));
                     }
                     break;
+                case 18:
+                    if (Res[curCnt] == Result.True)
+                    {
+                        this.Invoke(new Action(() =>
+                        {
+                            this.Result19.LanternBackground = Color.Lime;
+                        }));
+                    }
+                    else
+                    {
+                        Res_End = false;
+                        this.Invoke(new Action(() =>
+                        {
+                            this.Result19.LanternBackground = Color.Red;
+                        }));
+                    }
+                    break;
             }
         }
 
         private void init()
         {
             //在这里进行两块板子之间各种数据以及界面的初始化
-
+            for(int i = 0;i<19;i++)
+            {
+                Res[i] = Result.None;
+            }
+            //初始化所有的灯泡
+            this.Result1.LanternBackground = Color.Silver;
+            this.Result2.LanternBackground = Color.Silver;
+            this.Result3.LanternBackground = Color.Silver;
+            this.Result4.LanternBackground = Color.Silver;
+            this.Result5.LanternBackground = Color.Silver;
+            this.Result6.LanternBackground = Color.Silver;
+            this.Result7.LanternBackground = Color.Silver;
+            this.Result8.LanternBackground = Color.Silver;
+            this.Result9.LanternBackground = Color.Silver;
+            this.Result10.LanternBackground = Color.Silver;
+            this.Result11.LanternBackground = Color.Silver;
+            this.Result12.LanternBackground = Color.Silver;
+            this.Result13.LanternBackground = Color.Silver;
+            this.Result14.LanternBackground = Color.Silver;
+            this.Result15.LanternBackground = Color.Silver;
+            this.Result16.LanternBackground = Color.Silver;
+            this.Result17.LanternBackground = Color.Silver;
+            this.Result18.LanternBackground = Color.Silver;
+            this.Result19.LanternBackground = Color.Silver;
             status = Status.SENDGING;
+            // 修改结果展示
+            Res_End = true;
+            this.Invoke(new Action(() =>
+            {
+                this.Result_End.Text = "";
+                this.Panel_Result.BackColor = Color.Silver;
+            }));
+
+            //测试用
+            if(Detect_Algorithm.tt == 1)
+            {
+                Detect_Algorithm.tt = 2;
+            }
+            else
+            {
+                Detect_Algorithm.tt = 1;
+            }
         }
         #endregion
         //-----------------------Init--------------------------//
@@ -455,9 +548,13 @@ namespace Detect_xk
         /// </summary>
         private void ConfigInit()
         {
+            
+            //配置上面那一栏的当日信息
+            current_cnt();
             try
             {
                 //获取Config路径
+                //存放所有型号产品的
                 var list = Dir.GetFiles();
                 for (int i = 0; i < list.Length; i++)
                 {
@@ -535,6 +632,89 @@ namespace Detect_xk
             }
         }
 
+        private void RootConfig()
+        {
+            if(userName == "HHUC714" && passWord == "123456")
+            {
+                ;
+            }
+            else
+            {
+                if ( userName != "10086") //进来了 ，并且输入了userName
+                {
+                    this.Invoke(new Action(() =>
+                    {
+                        this.tabControl2.TabPages.Remove(root_Debug);
+                    }));
+                    isIn = false;
+                }
+            }
+        }
+
+        private void current_cnt()
+        {
+            // 设置当日的统计数据
+            string time = DateTime.Now.ToShortDateString().ToString();    // 2008-9-4
+            int year = 0, month = 0, day = 0;
+            int[] t = new int[3];
+            int temp = 0;
+            int k = 0;
+            for (int i = 0; i < time.Length; i++)
+            {
+                if (time[i] == '/')
+                {
+                    t[k++] = temp;
+                    temp = 0;
+                    continue;
+                }
+                temp *= 10;
+                temp += time[i] - '0';
+            }
+            t[2] = temp;
+            year = t[0]; month = t[1]; day = t[2];//获取到开机的时候的日期，年月日
+
+            int yearInXml, monthInXml, dayInXml;
+            Today_CntConfig = XmlTools.readXml(XmlCntAdr);
+            
+            XmlNode root = XmlTools.getXmlNode(Today_CntConfig, "/last_used/year");
+            string syear = root.InnerText;
+            root = XmlTools.getXmlNode(Today_CntConfig, "/last_used/month");
+            string smonth = root.InnerText;
+            root = XmlTools.getXmlNode(Today_CntConfig, "/last_used/day");
+            string sday = root.InnerText;
+            yearInXml = Convert.ToInt32(syear);
+            monthInXml = Convert.ToInt32(smonth);
+            dayInXml = Convert.ToInt32(sday);
+
+            
+            
+            if (yearInXml == year && monthInXml == month && dayInXml == day)//同一天
+            {
+                //获取OK和NG
+                var root1 = XmlTools.getXmlNode(Today_CntConfig, "/last_used/OK");
+                cntOK = Convert.ToInt32(root1.InnerText);
+                var root2 = XmlTools.getXmlNode(Today_CntConfig, "/last_used/NG");
+                cntNG = Convert.ToInt32(root2.InnerText);
+                this.cnt_TodayOK.Text = root1.InnerText;
+                this.cnt_TodayNG.Text = root2.InnerText;
+            }
+            else
+            {
+                cntOK = 0;
+                cntNG = 0;
+                var root1 = XmlTools.getXmlNode(Today_CntConfig, "/last_used/OK");
+                var root2 = XmlTools.getXmlNode(Today_CntConfig, "/last_used/NG");
+                var rootYear = XmlTools.getXmlNode(Today_CntConfig, "/last_used/year");
+                var rootMonth = XmlTools.getXmlNode(Today_CntConfig, "/last_used/month");
+                var rootDay = XmlTools.getXmlNode(Today_CntConfig, "/last_used/day");
+                root1.InnerText = "0";
+                root2.InnerText = "0";
+                rootYear.InnerText = year.ToString();
+                rootMonth.InnerText = month.ToString();
+                rootDay.InnerText = day.ToString();
+                XmlTools.writeXml(Today_CntConfig, XmlCntAdr);
+            }
+        }
         /// <summary>
         /// 加载指定文件
         /// </summary>
@@ -577,6 +757,7 @@ namespace Detect_xk
             {
                 userName = formLogin.UserName;
                 passWord = formLogin.PassWord;
+                isIn = formLogin.IsIn;
                 formLogin.Dispose();
             }
             else
@@ -586,6 +767,28 @@ namespace Detect_xk
             }
 
         }
+        /// <summary>
+        /// 输入产品机型并加载到用户操作界面
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_ModelLoad_Click(object sender, EventArgs e)
+        {
+            if(btn_ModelLoad.Text == "应用")
+            {
+                btn_ModelLoad.Text = "取消应用";
+                lab_Model.Text = tBox_Model.Text;
+                tBox_Model.Enabled = false;
+            }
+            else
+            {
+                btn_ModelLoad.Text = "应用";
+                lab_Model.Text = null;
+                tBox_Model.Enabled = true;        
+            }
+        }
+
+
         #endregion
 
         #region COM初始化
@@ -782,130 +985,137 @@ namespace Detect_xk
             switch(curCnt)
             {
                 case 0:
-                    if (algorithm.Alg1())
+                    if (Detect_Algorithm.brightPulsDetection(PicAdr + "1.bmp", PicAdr + "2.bmp",5))
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 1:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 2:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 3:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 4:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 5:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 6:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 7:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 8:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 9:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 10:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 11:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 12:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 13:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 14:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 15:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 16:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
                     break;
                 case 17:
                     if (algorithm.Alg1())
                     {
-                        Res[curCnt] = true;
+                        Res[curCnt] = Result.True;
                     }
-                    else Res[curCnt] = false;
+                    else Res[curCnt] = Result.False;
+                    break;
+                case 18:
+                    if (algorithm.Alg1())
+                    {
+                        Res[curCnt] = Result.True;
+                    }
+                    else Res[curCnt] = Result.False;
                     break;
             }
         }
@@ -968,6 +1178,7 @@ namespace Detect_xk
             }));
             if(indata == "11")//这里需要更改，和机械臂那边进行一个沟通
             {
+                if(status == Status.WAIT_FOR_DOWN)
                 status = Status.DETECTING;
             }
         }
@@ -1032,8 +1243,189 @@ namespace Detect_xk
         //-----------------------数据库------------------------//
         private void ConnectToDataBase_Click(object sender, EventArgs e)
         {
-            DataBase.connectToDataBase(ref this.dataGridView);
+            DataBase.connectToDataBase(ref this.dataGridView,ref this.ConnectToDataBase,ref this.btn_AllDatas,ref this.btn_DBRangeQuery);
         }
+        private void btn_AllDatas_Click(object sender, EventArgs e)
+        {
+            DataBase.GetAllData(ref this.dataGridView);
+        }
+        private void btn_DBRangeQuery_Click(object sender, EventArgs e)
+        {
+            DateTime a, b;
+            a = this.TimeBeg.Value;
+            b = this.TimeEnd.Value;
+            DataBase.GetRangeData(ref this.dataGridView, a, b);
+        }
+        //--------------------UI点击事件-----------------------//
+        #region UI点击事件
+        private void Error1_Click(object sender, EventArgs e)
+        {
+            if (Res[0] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\""+ CheckMsg[0] +"\"有错误";
+                picBox_Error.Load(ErrorAdr + "1.jpg");
+            }   
+        }
+
+        private void Error2_Click(object sender, EventArgs e)
+        {
+            if (Res[1] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[1] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "2.jpg");
+            }
+        }
+
+        private void Error3_Click(object sender, EventArgs e)
+        {
+            if (Res[2] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[2] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "3.jpg");
+            }
+        }
+
+        private void Error4_Click(object sender, EventArgs e)
+        {
+            if (Res[3] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[3] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "4.jpg");
+            }
+        }
+
+        private void Error5_Click(object sender, EventArgs e)
+        {
+            if (Res[4] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[4] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "5.jpg");
+            }
+        }
+
+        private void Error6_Click(object sender, EventArgs e)
+        {
+            if (Res[5] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[5] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "6.jpg");
+            }
+        }
+
+        private void Error7_Click(object sender, EventArgs e)
+        {
+            if (Res[6] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[6] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "7.jpg");
+            }
+        }
+
+        private void Error8_Click(object sender, EventArgs e)
+        {
+            if (Res[7] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[7] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "8.jpg");
+            }
+        }
+
+        private void Error9_Click(object sender, EventArgs e)
+        {
+            if (Res[8] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[8] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "9.jpg");
+            }
+        }
+
+        private void Error10_Click(object sender, EventArgs e)
+        {
+            if (Res[9] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[9] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "10.jpg");
+            }
+        }
+
+        private void Error11_Click(object sender, EventArgs e)
+        {
+            if (Res[10] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[10] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "11.jpg");
+            }
+        }
+        private void Error12_Click(object sender, EventArgs e)
+        {
+            if (Res[11] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[11] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "12.jpg");
+            }
+        }
+        private void Error13_Click(object sender, EventArgs e)
+        {
+            if (Res[12] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[12] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "13.jpg");
+            }
+        }
+        private void Error14_Click(object sender, EventArgs e)
+        {
+            if (Res[13] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[13] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "14.jpg");
+            }
+        }
+        private void Error15_Click(object sender, EventArgs e)
+        {
+            if (Res[14] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[14] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "15.jpg");
+            }
+        }
+        private void Error16_Click(object sender, EventArgs e)
+        {
+            if (Res[15] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[15] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "16.jpg");
+            }
+        }
+        private void Error17_Click(object sender, EventArgs e)
+        {
+            if (Res[16] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[16] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "17.jpg");
+            }
+        }
+        private void Error18_Click(object sender, EventArgs e)
+        {
+            if (Res[17] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[17] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "18.jpg");
+            }
+        }
+
+ 
+
+        private void Error19_Click(object sender, EventArgs e)
+        {
+            if (Res[18] == Result.False)
+            {
+                lab_ErrorMsg.Text = "当前\"" + CheckMsg[18] + "\"有错误";
+                picBox_Error.Load(ErrorAdr + "19.jpg");
+            }
+        }
+        #endregion
+
+        
     }
 }
 
@@ -1085,22 +1477,22 @@ public enum Det_Type
 //绑定算法函数
 public class Detect_Algorithm
 {
+    public static int tt = 1;
     public bool Alg1()
     {
         bool res = false;
         Random temp = new Random();
         int x = temp.Next();
         if (x % 2 == 1) res = true;
-        return true;
+        if (tt == 1)
+            return true;
+        else
+            return false;
     }
-    public bool Alg2()
-    {
-        bool res = false;
-        Random temp = new Random();
-        int x = temp.Next();
-        if (x % 2 == 1) res = true;
-        return res;
-    }
+    [DllImport("PanelFunDectDLL.dll", EntryPoint = "brightPulsDetection", ExactSpelling = false, CallingConvention = CallingConvention.Cdecl)]
+    public static extern bool brightPulsDetection(string prePath,string srcPath,int threshold);
+    [DllImport("PanelFunDectDLL.dll", EntryPoint = "fnPanelFunDectDLL", ExactSpelling = false, CallingConvention = CallingConvention.Cdecl)]
+    public static extern int fnPanelFunDectDLL();
     public bool Alg3()
     {
         bool res = false;
@@ -1118,3 +1510,12 @@ public class Detect_Algorithm
         return res;
     }
 }
+
+public enum Result
+{
+    None = 2,
+    True = 1,
+    False = 0,
+    
+}
+    

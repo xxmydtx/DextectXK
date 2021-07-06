@@ -33,11 +33,17 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.skinPanel5 = new CCWin.SkinControl.SkinPanel();
-            this.label41 = new System.Windows.Forms.Label();
+            this.lab_Model = new System.Windows.Forms.Label();
             this.Panel_Result = new System.Windows.Forms.Panel();
             this.Result_End = new System.Windows.Forms.Label();
             this.panel34 = new System.Windows.Forms.Panel();
-            this.label29 = new System.Windows.Forms.Label();
+            this.lab_ErrorMsg = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.picBox_Error = new System.Windows.Forms.PictureBox();
+            this.ResultShow_DarkL = new System.Windows.Forms.Label();
+            this.ResultShow_L = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.panel36 = new System.Windows.Forms.Panel();
             this.label36 = new System.Windows.Forms.Label();
@@ -66,37 +72,35 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.ratio = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.cnt_Sum = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.cnt_TodayNG = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.cnt_TodayOK = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.skinPanel1 = new CCWin.SkinControl.SkinPanel();
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.skinPanel3 = new CCWin.SkinControl.SkinPanel();
+            this.Result19 = new HslCommunication.Controls.UserLantern();
             this.Result18 = new HslCommunication.Controls.UserLantern();
-            this.Result17 = new HslCommunication.Controls.UserLantern();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.Result16 = new HslCommunication.Controls.UserLantern();
+            this.Result17 = new HslCommunication.Controls.UserLantern();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel37 = new System.Windows.Forms.Panel();
             this.label40 = new System.Windows.Forms.Label();
             this.skinPanel4 = new CCWin.SkinControl.SkinPanel();
+            this.Result16 = new HslCommunication.Controls.UserLantern();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.Result3 = new HslCommunication.Controls.UserLantern();
             this.Result14 = new HslCommunication.Controls.UserLantern();
             this.Result12 = new HslCommunication.Controls.UserLantern();
@@ -194,13 +198,23 @@
             this.txtport = new System.Windows.Forms.TextBox();
             this.MsgBox = new System.Windows.Forms.RichTextBox();
             this.btn_Lisening = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tBox_Version = new System.Windows.Forms.TextBox();
+            this.btn_ModelLoad = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tBox_Model = new System.Windows.Forms.TextBox();
             this.loader = new System.Windows.Forms.Button();
             this.ConfigAdr = new System.Windows.Forms.ComboBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.TimeEnd = new System.Windows.Forms.DateTimePicker();
+            this.TimeBeg = new System.Windows.Forms.DateTimePicker();
+            this.btn_AllDatas = new System.Windows.Forms.Button();
+            this.btn_DBRangeQuery = new System.Windows.Forms.Button();
             this.ConnectToDataBase = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.root_Debug = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
@@ -210,6 +224,7 @@
             this.skinPanel5.SuspendLayout();
             this.Panel_Result.SuspendLayout();
             this.panel34.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Error)).BeginInit();
             this.panel36.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -219,7 +234,10 @@
             this.skinPanel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.skinPanel1.SuspendLayout();
             this.skinPanel2.SuspendLayout();
             this.skinPanel3.SuspendLayout();
@@ -229,6 +247,7 @@
             this.panel15.SuspendLayout();
             this.panel37.SuspendLayout();
             this.skinPanel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel31.SuspendLayout();
             this.panel28.SuspendLayout();
             this.panel27.SuspendLayout();
@@ -271,9 +290,9 @@
             this.tabControl2.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Controls.Add(this.tabPage1);
             this.tabControl2.Controls.Add(this.tabPage2);
             this.tabControl2.Controls.Add(this.tabPage5);
+            this.tabControl2.Controls.Add(this.root_Debug);
             this.tabControl2.Location = new System.Drawing.Point(3, 44);
             this.tabControl2.Multiline = true;
             this.tabControl2.Name = "tabControl2";
@@ -289,7 +308,6 @@
             this.tabPage3.Controls.Add(this.panel14);
             this.tabPage3.Controls.Add(this.panel3);
             this.tabPage3.Controls.Add(this.panel4);
-            this.tabPage3.Controls.Add(this.panel5);
             this.tabPage3.Controls.Add(this.skinPanel1);
             this.tabPage3.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
@@ -304,7 +322,7 @@
             // 
             this.skinPanel5.BackColor = System.Drawing.Color.White;
             this.skinPanel5.BorderColor = System.Drawing.Color.Black;
-            this.skinPanel5.Controls.Add(this.label41);
+            this.skinPanel5.Controls.Add(this.lab_Model);
             this.skinPanel5.Controls.Add(this.Panel_Result);
             this.skinPanel5.Controls.Add(this.panel34);
             this.skinPanel5.Controls.Add(this.label39);
@@ -312,32 +330,32 @@
             this.skinPanel5.Controls.Add(this.panel2);
             this.skinPanel5.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel5.DownBack = null;
-            this.skinPanel5.Location = new System.Drawing.Point(569, 191);
+            this.skinPanel5.Location = new System.Drawing.Point(495, 146);
             this.skinPanel5.MouseBack = null;
             this.skinPanel5.Name = "skinPanel5";
             this.skinPanel5.NormlBack = null;
             this.skinPanel5.Radius = 50;
             this.skinPanel5.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinPanel5.Size = new System.Drawing.Size(575, 362);
+            this.skinPanel5.Size = new System.Drawing.Size(649, 390);
             this.skinPanel5.TabIndex = 7;
             // 
-            // label41
+            // lab_Model
             // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label41.Location = new System.Drawing.Point(127, 43);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(160, 16);
-            this.label41.TabIndex = 43;
-            this.label41.Text = "xxxx-xxxx-xxxx-xxxx";
+            this.lab_Model.AutoSize = true;
+            this.lab_Model.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lab_Model.Location = new System.Drawing.Point(132, 28);
+            this.lab_Model.Name = "lab_Model";
+            this.lab_Model.Size = new System.Drawing.Size(160, 16);
+            this.lab_Model.TabIndex = 43;
+            this.lab_Model.Text = "xxxx-xxxx-xxxx-xxxx";
             // 
             // Panel_Result
             // 
             this.Panel_Result.BackColor = System.Drawing.Color.Silver;
             this.Panel_Result.Controls.Add(this.Result_End);
-            this.Panel_Result.Location = new System.Drawing.Point(255, 84);
+            this.Panel_Result.Location = new System.Drawing.Point(383, 70);
             this.Panel_Result.Name = "Panel_Result";
-            this.Panel_Result.Size = new System.Drawing.Size(305, 268);
+            this.Panel_Result.Size = new System.Drawing.Size(246, 310);
             this.Panel_Result.TabIndex = 8;
             // 
             // Result_End
@@ -345,7 +363,7 @@
             this.Result_End.AutoSize = true;
             this.Result_End.Font = new System.Drawing.Font("宋体", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Result_End.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Result_End.Location = new System.Drawing.Point(72, 105);
+            this.Result_End.Location = new System.Drawing.Point(69, 134);
             this.Result_End.Name = "Result_End";
             this.Result_End.Size = new System.Drawing.Size(0, 48);
             this.Result_End.TabIndex = 0;
@@ -353,27 +371,91 @@
             // panel34
             // 
             this.panel34.BackColor = System.Drawing.Color.Silver;
-            this.panel34.Controls.Add(this.label29);
-            this.panel34.Location = new System.Drawing.Point(21, 84);
+            this.panel34.Controls.Add(this.lab_ErrorMsg);
+            this.panel34.Controls.Add(this.label41);
+            this.panel34.Controls.Add(this.picBox_Error);
+            this.panel34.Controls.Add(this.ResultShow_DarkL);
+            this.panel34.Controls.Add(this.ResultShow_L);
+            this.panel34.Controls.Add(this.label6);
+            this.panel34.Controls.Add(this.label7);
+            this.panel34.Location = new System.Drawing.Point(21, 70);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(212, 268);
+            this.panel34.Size = new System.Drawing.Size(356, 309);
             this.panel34.TabIndex = 7;
             // 
-            // label29
+            // lab_ErrorMsg
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("宋体", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label29.Location = new System.Drawing.Point(14, 104);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(192, 48);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "总结果:";
+            this.lab_ErrorMsg.AutoSize = true;
+            this.lab_ErrorMsg.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lab_ErrorMsg.Location = new System.Drawing.Point(111, 44);
+            this.lab_ErrorMsg.Name = "lab_ErrorMsg";
+            this.lab_ErrorMsg.Size = new System.Drawing.Size(0, 16);
+            this.lab_ErrorMsg.TabIndex = 6;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label41.Location = new System.Drawing.Point(12, 44);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(80, 16);
+            this.label41.TabIndex = 5;
+            this.label41.Text = "错误信息:";
+            // 
+            // picBox_Error
+            // 
+            this.picBox_Error.Location = new System.Drawing.Point(4, 66);
+            this.picBox_Error.Name = "picBox_Error";
+            this.picBox_Error.Size = new System.Drawing.Size(348, 237);
+            this.picBox_Error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox_Error.TabIndex = 4;
+            this.picBox_Error.TabStop = false;
+            // 
+            // ResultShow_DarkL
+            // 
+            this.ResultShow_DarkL.AutoSize = true;
+            this.ResultShow_DarkL.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ResultShow_DarkL.Location = new System.Drawing.Point(249, 12);
+            this.ResultShow_DarkL.Name = "ResultShow_DarkL";
+            this.ResultShow_DarkL.Size = new System.Drawing.Size(40, 16);
+            this.ResultShow_DarkL.TabIndex = 3;
+            this.ResultShow_DarkL.Text = "0.0A";
+            // 
+            // ResultShow_L
+            // 
+            this.ResultShow_L.AutoSize = true;
+            this.ResultShow_L.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ResultShow_L.Location = new System.Drawing.Point(104, 11);
+            this.ResultShow_L.Name = "ResultShow_L";
+            this.ResultShow_L.Size = new System.Drawing.Size(40, 16);
+            this.ResultShow_L.TabIndex = 2;
+            this.ResultShow_L.Text = "0.0A";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(179, 12);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 16);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "暗电流:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label7.Location = new System.Drawing.Point(12, 11);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 16);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "工作电流:";
             // 
             // label39
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label39.Location = new System.Drawing.Point(383, 43);
+            this.label39.Location = new System.Drawing.Point(452, 28);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(160, 16);
             this.label39.TabIndex = 41;
@@ -383,7 +465,7 @@
             // 
             this.panel36.BackColor = System.Drawing.Color.Silver;
             this.panel36.Controls.Add(this.label36);
-            this.panel36.Location = new System.Drawing.Point(299, 37);
+            this.panel36.Location = new System.Drawing.Point(369, 22);
             this.panel36.Name = "panel36";
             this.panel36.Size = new System.Drawing.Size(79, 27);
             this.panel36.TabIndex = 8;
@@ -402,7 +484,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
             this.panel2.Controls.Add(this.label34);
-            this.panel2.Location = new System.Drawing.Point(38, 37);
+            this.panel2.Location = new System.Drawing.Point(43, 22);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(83, 27);
             this.panel2.TabIndex = 7;
@@ -674,34 +756,86 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Controls.Add(this.ratio);
             this.panel9.Location = new System.Drawing.Point(992, 3);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(150, 35);
             this.panel9.TabIndex = 4;
             // 
+            // ratio
+            // 
+            this.ratio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ratio.AutoSize = true;
+            this.ratio.Location = new System.Drawing.Point(3, 8);
+            this.ratio.Name = "ratio";
+            this.ratio.Size = new System.Drawing.Size(19, 20);
+            this.ratio.TabIndex = 3;
+            this.ratio.Text = "0";
+            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.Controls.Add(this.cnt_Sum);
             this.panel8.Location = new System.Drawing.Point(717, 3);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(150, 35);
             this.panel8.TabIndex = 4;
             // 
+            // cnt_Sum
+            // 
+            this.cnt_Sum.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cnt_Sum.AutoSize = true;
+            this.cnt_Sum.Location = new System.Drawing.Point(3, 8);
+            this.cnt_Sum.Name = "cnt_Sum";
+            this.cnt_Sum.Size = new System.Drawing.Size(19, 20);
+            this.cnt_Sum.TabIndex = 2;
+            this.cnt_Sum.Text = "0";
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Controls.Add(this.cnt_TodayNG);
             this.panel7.Location = new System.Drawing.Point(427, 3);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(150, 35);
             this.panel7.TabIndex = 4;
             // 
+            // cnt_TodayNG
+            // 
+            this.cnt_TodayNG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cnt_TodayNG.AutoSize = true;
+            this.cnt_TodayNG.Location = new System.Drawing.Point(4, 8);
+            this.cnt_TodayNG.Name = "cnt_TodayNG";
+            this.cnt_TodayNG.Size = new System.Drawing.Size(19, 20);
+            this.cnt_TodayNG.TabIndex = 1;
+            this.cnt_TodayNG.Text = "0";
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.cnt_TodayOK);
             this.panel6.Location = new System.Drawing.Point(139, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(150, 35);
             this.panel6.TabIndex = 3;
+            // 
+            // cnt_TodayOK
+            // 
+            this.cnt_TodayOK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cnt_TodayOK.AutoSize = true;
+            this.cnt_TodayOK.Location = new System.Drawing.Point(3, 8);
+            this.cnt_TodayOK.Name = "cnt_TodayOK";
+            this.cnt_TodayOK.Size = new System.Drawing.Size(19, 20);
+            this.cnt_TodayOK.TabIndex = 0;
+            this.cnt_TodayOK.Text = "0";
             // 
             // label1
             // 
@@ -713,94 +847,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "当日OK数";
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.panel13);
-            this.panel5.Controls.Add(this.panel12);
-            this.panel5.Controls.Add(this.panel11);
-            this.panel5.Controls.Add(this.panel10);
-            this.panel5.Location = new System.Drawing.Point(1, 142);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1147, 43);
-            this.panel5.TabIndex = 3;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.Location = new System.Drawing.Point(886, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 20);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "累计良率";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(603, 10);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 20);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "累计总数";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(311, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 20);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "累计NG数";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(22, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 20);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "累计OK数";
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Location = new System.Drawing.Point(993, 4);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(150, 35);
-            this.panel13.TabIndex = 5;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Location = new System.Drawing.Point(718, 4);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(150, 35);
-            this.panel12.TabIndex = 5;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Location = new System.Drawing.Point(427, 4);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(150, 35);
-            this.panel11.TabIndex = 5;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(139, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(150, 35);
-            this.panel10.TabIndex = 4;
-            // 
             // skinPanel1
             // 
             this.skinPanel1.BackColor = System.Drawing.Color.White;
@@ -811,13 +857,13 @@
             this.skinPanel1.Controls.Add(this.skinPanel4);
             this.skinPanel1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel1.DownBack = null;
-            this.skinPanel1.Location = new System.Drawing.Point(3, 191);
+            this.skinPanel1.Location = new System.Drawing.Point(3, 145);
             this.skinPanel1.MouseBack = null;
             this.skinPanel1.Name = "skinPanel1";
             this.skinPanel1.NormlBack = null;
             this.skinPanel1.Radius = 50;
             this.skinPanel1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinPanel1.Size = new System.Drawing.Size(563, 365);
+            this.skinPanel1.Size = new System.Drawing.Size(486, 391);
             this.skinPanel1.TabIndex = 8;
             // 
             // skinPanel2
@@ -833,14 +879,14 @@
             this.skinPanel2.NormlBack = null;
             this.skinPanel2.Radius = 50;
             this.skinPanel2.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinPanel2.Size = new System.Drawing.Size(556, 45);
+            this.skinPanel2.Size = new System.Drawing.Size(478, 45);
             this.skinPanel2.TabIndex = 0;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(206, 10);
+            this.label9.Location = new System.Drawing.Point(159, 10);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(149, 24);
             this.label9.TabIndex = 0;
@@ -850,50 +896,51 @@
             // 
             this.skinPanel3.BackColor = System.Drawing.Color.Transparent;
             this.skinPanel3.BorderColor = System.Drawing.Color.Black;
+            this.skinPanel3.Controls.Add(this.Result19);
             this.skinPanel3.Controls.Add(this.Result18);
-            this.skinPanel3.Controls.Add(this.Result17);
             this.skinPanel3.Controls.Add(this.panel19);
             this.skinPanel3.Controls.Add(this.panel18);
             this.skinPanel3.Controls.Add(this.panel17);
-            this.skinPanel3.Controls.Add(this.Result16);
+            this.skinPanel3.Controls.Add(this.Result17);
             this.skinPanel3.Controls.Add(this.panel15);
             this.skinPanel3.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.skinPanel3.DownBack = null;
-            this.skinPanel3.Location = new System.Drawing.Point(24, 278);
+            this.skinPanel3.Location = new System.Drawing.Point(24, 318);
             this.skinPanel3.MouseBack = null;
             this.skinPanel3.Name = "skinPanel3";
             this.skinPanel3.NormlBack = null;
-            this.skinPanel3.Size = new System.Drawing.Size(513, 63);
+            this.skinPanel3.Size = new System.Drawing.Size(437, 63);
             this.skinPanel3.TabIndex = 1;
+            // 
+            // Result19
+            // 
+            this.Result19.BackColor = System.Drawing.Color.Transparent;
+            this.Result19.LanternBackground = System.Drawing.Color.Silver;
+            this.Result19.Location = new System.Drawing.Point(409, 36);
+            this.Result19.Margin = new System.Windows.Forms.Padding(33);
+            this.Result19.Name = "Result19";
+            this.Result19.Size = new System.Drawing.Size(28, 27);
+            this.Result19.TabIndex = 9;
             // 
             // Result18
             // 
             this.Result18.BackColor = System.Drawing.Color.Transparent;
             this.Result18.LanternBackground = System.Drawing.Color.Silver;
-            this.Result18.Location = new System.Drawing.Point(482, 35);
-            this.Result18.Margin = new System.Windows.Forms.Padding(33);
+            this.Result18.Location = new System.Drawing.Point(261, 35);
+            this.Result18.Margin = new System.Windows.Forms.Padding(20);
             this.Result18.Name = "Result18";
             this.Result18.Size = new System.Drawing.Size(28, 27);
-            this.Result18.TabIndex = 9;
-            // 
-            // Result17
-            // 
-            this.Result17.BackColor = System.Drawing.Color.Transparent;
-            this.Result17.LanternBackground = System.Drawing.Color.Silver;
-            this.Result17.Location = new System.Drawing.Point(296, 35);
-            this.Result17.Margin = new System.Windows.Forms.Padding(20);
-            this.Result17.Name = "Result17";
-            this.Result17.Size = new System.Drawing.Size(28, 27);
-            this.Result17.TabIndex = 8;
+            this.Result18.TabIndex = 8;
             // 
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.Color.Silver;
             this.panel19.Controls.Add(this.label14);
-            this.panel19.Location = new System.Drawing.Point(370, 35);
+            this.panel19.Location = new System.Drawing.Point(296, 35);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(112, 27);
             this.panel19.TabIndex = 7;
+            this.panel19.Click += new System.EventHandler(this.Error19_Click);
             // 
             // label14
             // 
@@ -904,15 +951,17 @@
             this.label14.Size = new System.Drawing.Size(104, 16);
             this.label14.TabIndex = 0;
             this.label14.Text = "按键丝印亮度";
+            this.label14.Click += new System.EventHandler(this.Error19_Click);
             // 
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.Color.Silver;
             this.panel18.Controls.Add(this.label13);
-            this.panel18.Location = new System.Drawing.Point(183, 35);
+            this.panel18.Location = new System.Drawing.Point(148, 35);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(112, 27);
             this.panel18.TabIndex = 6;
+            this.panel18.Click += new System.EventHandler(this.Error18_Click);
             // 
             // label13
             // 
@@ -923,6 +972,7 @@
             this.label13.Size = new System.Drawing.Size(104, 16);
             this.label13.TabIndex = 0;
             this.label13.Text = "按键丝印位置";
+            this.label13.Click += new System.EventHandler(this.Error18_Click);
             // 
             // panel17
             // 
@@ -932,6 +982,7 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(112, 27);
             this.panel17.TabIndex = 5;
+            this.panel17.Click += new System.EventHandler(this.Error17_Click);
             // 
             // label12
             // 
@@ -942,16 +993,17 @@
             this.label12.Size = new System.Drawing.Size(104, 16);
             this.label12.TabIndex = 0;
             this.label12.Text = "按键丝印形状";
+            this.label12.Click += new System.EventHandler(this.Error17_Click);
             // 
-            // Result16
+            // Result17
             // 
-            this.Result16.BackColor = System.Drawing.Color.Transparent;
-            this.Result16.LanternBackground = System.Drawing.Color.Silver;
-            this.Result16.Location = new System.Drawing.Point(114, 35);
-            this.Result16.Margin = new System.Windows.Forms.Padding(12);
-            this.Result16.Name = "Result16";
-            this.Result16.Size = new System.Drawing.Size(28, 27);
-            this.Result16.TabIndex = 4;
+            this.Result17.BackColor = System.Drawing.Color.Transparent;
+            this.Result17.LanternBackground = System.Drawing.Color.Silver;
+            this.Result17.Location = new System.Drawing.Point(114, 35);
+            this.Result17.Margin = new System.Windows.Forms.Padding(12);
+            this.Result17.Name = "Result17";
+            this.Result17.Size = new System.Drawing.Size(28, 27);
+            this.Result17.TabIndex = 4;
             // 
             // panel15
             // 
@@ -959,14 +1011,14 @@
             this.panel15.Controls.Add(this.label10);
             this.panel15.Location = new System.Drawing.Point(1, 1);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(511, 33);
+            this.panel15.Size = new System.Drawing.Size(436, 33);
             this.panel15.TabIndex = 0;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.Location = new System.Drawing.Point(232, 6);
+            this.label10.Location = new System.Drawing.Point(182, 5);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(58, 24);
             this.label10.TabIndex = 0;
@@ -980,6 +1032,7 @@
             this.panel37.Name = "panel37";
             this.panel37.Size = new System.Drawing.Size(112, 27);
             this.panel37.TabIndex = 8;
+            this.panel37.Click += new System.EventHandler(this.Error1_Click);
             // 
             // label40
             // 
@@ -989,12 +1042,15 @@
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(72, 16);
             this.label40.TabIndex = 0;
-            this.label40.Text = "软件版本";
+            this.label40.Text = "背光开启";
+            this.label40.Click += new System.EventHandler(this.Error1_Click);
             // 
             // skinPanel4
             // 
             this.skinPanel4.BackColor = System.Drawing.Color.Transparent;
             this.skinPanel4.BorderColor = System.Drawing.Color.Black;
+            this.skinPanel4.Controls.Add(this.Result16);
+            this.skinPanel4.Controls.Add(this.panel5);
             this.skinPanel4.Controls.Add(this.Result3);
             this.skinPanel4.Controls.Add(this.Result14);
             this.skinPanel4.Controls.Add(this.Result12);
@@ -1031,14 +1087,45 @@
             this.skinPanel4.MouseBack = null;
             this.skinPanel4.Name = "skinPanel4";
             this.skinPanel4.NormlBack = null;
-            this.skinPanel4.Size = new System.Drawing.Size(513, 227);
+            this.skinPanel4.Size = new System.Drawing.Size(437, 265);
             this.skinPanel4.TabIndex = 2;
+            // 
+            // Result16
+            // 
+            this.Result16.BackColor = System.Drawing.Color.Transparent;
+            this.Result16.LanternBackground = System.Drawing.Color.Silver;
+            this.Result16.Location = new System.Drawing.Point(261, 230);
+            this.Result16.Margin = new System.Windows.Forms.Padding(255);
+            this.Result16.Name = "Result16";
+            this.Result16.Size = new System.Drawing.Size(27, 28);
+            this.Result16.TabIndex = 41;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Silver;
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Location = new System.Drawing.Point(296, 193);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(112, 27);
+            this.panel5.TabIndex = 31;
+            this.panel5.Click += new System.EventHandler(this.Error15_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label5.Location = new System.Drawing.Point(29, 6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 16);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "退出键";
+            this.label5.Click += new System.EventHandler(this.Error15_Click);
             // 
             // Result3
             // 
             this.Result3.BackColor = System.Drawing.Color.Transparent;
             this.Result3.LanternBackground = System.Drawing.Color.Silver;
-            this.Result3.Location = new System.Drawing.Point(483, 35);
+            this.Result3.Location = new System.Drawing.Point(409, 35);
             this.Result3.Margin = new System.Windows.Forms.Padding(255);
             this.Result3.Name = "Result3";
             this.Result3.Size = new System.Drawing.Size(28, 27);
@@ -1048,7 +1135,7 @@
             // 
             this.Result14.BackColor = System.Drawing.Color.Transparent;
             this.Result14.LanternBackground = System.Drawing.Color.Silver;
-            this.Result14.Location = new System.Drawing.Point(296, 193);
+            this.Result14.Location = new System.Drawing.Point(261, 193);
             this.Result14.Margin = new System.Windows.Forms.Padding(255);
             this.Result14.Name = "Result14";
             this.Result14.Size = new System.Drawing.Size(28, 27);
@@ -1058,7 +1145,7 @@
             // 
             this.Result12.BackColor = System.Drawing.Color.Transparent;
             this.Result12.LanternBackground = System.Drawing.Color.Silver;
-            this.Result12.Location = new System.Drawing.Point(483, 153);
+            this.Result12.Location = new System.Drawing.Point(409, 153);
             this.Result12.Margin = new System.Windows.Forms.Padding(255);
             this.Result12.Name = "Result12";
             this.Result12.Size = new System.Drawing.Size(28, 27);
@@ -1072,6 +1159,7 @@
             this.panel31.Name = "panel31";
             this.panel31.Size = new System.Drawing.Size(112, 27);
             this.panel31.TabIndex = 28;
+            this.panel31.Click += new System.EventHandler(this.Error13_Click);
             // 
             // label26
             // 
@@ -1082,6 +1170,7 @@
             this.label26.Size = new System.Drawing.Size(56, 16);
             this.label26.TabIndex = 0;
             this.label26.Text = "下一曲";
+            this.label26.Click += new System.EventHandler(this.Error13_Click);
             // 
             // panel28
             // 
@@ -1091,6 +1180,7 @@
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(112, 27);
             this.panel28.TabIndex = 25;
+            this.panel28.Click += new System.EventHandler(this.Error7_Click);
             // 
             // label23
             // 
@@ -1101,6 +1191,7 @@
             this.label23.Size = new System.Drawing.Size(80, 16);
             this.label23.TabIndex = 0;
             this.label23.Text = "屏幕亮度-";
+            this.label23.Click += new System.EventHandler(this.Error7_Click);
             // 
             // panel27
             // 
@@ -1110,22 +1201,24 @@
             this.panel27.Name = "panel27";
             this.panel27.Size = new System.Drawing.Size(112, 27);
             this.panel27.TabIndex = 23;
+            this.panel27.Click += new System.EventHandler(this.Error4_Click);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label22.Location = new System.Drawing.Point(25, 6);
+            this.label22.Location = new System.Drawing.Point(27, 6);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(56, 16);
             this.label22.TabIndex = 0;
             this.label22.Text = "暗电流";
+            this.label22.Click += new System.EventHandler(this.Error4_Click);
             // 
             // Result9
             // 
             this.Result9.BackColor = System.Drawing.Color.Transparent;
             this.Result9.LanternBackground = System.Drawing.Color.Silver;
-            this.Result9.Location = new System.Drawing.Point(483, 113);
+            this.Result9.Location = new System.Drawing.Point(409, 113);
             this.Result9.Margin = new System.Windows.Forms.Padding(153);
             this.Result9.Name = "Result9";
             this.Result9.Size = new System.Drawing.Size(28, 27);
@@ -1145,7 +1238,7 @@
             // 
             this.Result8.BackColor = System.Drawing.Color.Transparent;
             this.Result8.LanternBackground = System.Drawing.Color.Silver;
-            this.Result8.Location = new System.Drawing.Point(296, 113);
+            this.Result8.Location = new System.Drawing.Point(261, 113);
             this.Result8.Margin = new System.Windows.Forms.Padding(255);
             this.Result8.Name = "Result8";
             this.Result8.Size = new System.Drawing.Size(28, 27);
@@ -1175,7 +1268,7 @@
             // 
             this.Result15.BackColor = System.Drawing.Color.Transparent;
             this.Result15.LanternBackground = System.Drawing.Color.Silver;
-            this.Result15.Location = new System.Drawing.Point(483, 193);
+            this.Result15.Location = new System.Drawing.Point(409, 193);
             this.Result15.Margin = new System.Windows.Forms.Padding(153);
             this.Result15.Name = "Result15";
             this.Result15.Size = new System.Drawing.Size(28, 27);
@@ -1185,7 +1278,7 @@
             // 
             this.Result2.BackColor = System.Drawing.Color.Transparent;
             this.Result2.LanternBackground = System.Drawing.Color.Silver;
-            this.Result2.Location = new System.Drawing.Point(296, 35);
+            this.Result2.Location = new System.Drawing.Point(261, 35);
             this.Result2.Margin = new System.Windows.Forms.Padding(153);
             this.Result2.Name = "Result2";
             this.Result2.Size = new System.Drawing.Size(28, 27);
@@ -1205,7 +1298,7 @@
             // 
             this.Result11.BackColor = System.Drawing.Color.Transparent;
             this.Result11.LanternBackground = System.Drawing.Color.Silver;
-            this.Result11.Location = new System.Drawing.Point(296, 153);
+            this.Result11.Location = new System.Drawing.Point(261, 153);
             this.Result11.Margin = new System.Windows.Forms.Padding(55);
             this.Result11.Name = "Result11";
             this.Result11.Size = new System.Drawing.Size(28, 27);
@@ -1215,7 +1308,7 @@
             // 
             this.Result5.BackColor = System.Drawing.Color.Transparent;
             this.Result5.LanternBackground = System.Drawing.Color.Silver;
-            this.Result5.Location = new System.Drawing.Point(296, 74);
+            this.Result5.Location = new System.Drawing.Point(261, 74);
             this.Result5.Margin = new System.Windows.Forms.Padding(33);
             this.Result5.Name = "Result5";
             this.Result5.Size = new System.Drawing.Size(28, 27);
@@ -1235,7 +1328,7 @@
             // 
             this.Result6.BackColor = System.Drawing.Color.Transparent;
             this.Result6.LanternBackground = System.Drawing.Color.Silver;
-            this.Result6.Location = new System.Drawing.Point(483, 74);
+            this.Result6.Location = new System.Drawing.Point(409, 74);
             this.Result6.Margin = new System.Windows.Forms.Padding(153);
             this.Result6.Name = "Result6";
             this.Result6.Size = new System.Drawing.Size(28, 27);
@@ -1245,10 +1338,11 @@
             // 
             this.panel20.BackColor = System.Drawing.Color.Silver;
             this.panel20.Controls.Add(this.label15);
-            this.panel20.Location = new System.Drawing.Point(370, 35);
+            this.panel20.Location = new System.Drawing.Point(296, 35);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(112, 27);
             this.panel20.TabIndex = 6;
+            this.panel20.Click += new System.EventHandler(this.Error3_Click);
             // 
             // label15
             // 
@@ -1259,15 +1353,17 @@
             this.label15.Size = new System.Drawing.Size(72, 16);
             this.label15.TabIndex = 0;
             this.label15.Text = "工作电流";
+            this.label15.Click += new System.EventHandler(this.Error3_Click);
             // 
             // panel33
             // 
             this.panel33.BackColor = System.Drawing.Color.Silver;
             this.panel33.Controls.Add(this.label28);
-            this.panel33.Location = new System.Drawing.Point(183, 193);
+            this.panel33.Location = new System.Drawing.Point(148, 193);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(112, 27);
             this.panel33.TabIndex = 30;
+            this.panel33.Click += new System.EventHandler(this.Error14_Click);
             // 
             // label28
             // 
@@ -1278,6 +1374,7 @@
             this.label28.Size = new System.Drawing.Size(56, 16);
             this.label28.TabIndex = 0;
             this.label28.Text = "BACK键";
+            this.label28.Click += new System.EventHandler(this.Error14_Click);
             // 
             // panel32
             // 
@@ -1287,6 +1384,7 @@
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(112, 27);
             this.panel32.TabIndex = 29;
+            this.panel32.Click += new System.EventHandler(this.Error10_Click);
             // 
             // label27
             // 
@@ -1297,34 +1395,38 @@
             this.label27.Size = new System.Drawing.Size(48, 16);
             this.label27.TabIndex = 0;
             this.label27.Text = "音量-";
+            this.label27.Click += new System.EventHandler(this.Error10_Click);
             // 
             // panel30
             // 
             this.panel30.BackColor = System.Drawing.Color.Silver;
             this.panel30.Controls.Add(this.label25);
-            this.panel30.Location = new System.Drawing.Point(183, 113);
+            this.panel30.Location = new System.Drawing.Point(148, 113);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(112, 27);
             this.panel30.TabIndex = 27;
+            this.panel30.Click += new System.EventHandler(this.Error8_Click);
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label25.Location = new System.Drawing.Point(27, 6);
+            this.label25.Location = new System.Drawing.Point(28, 6);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(56, 16);
             this.label25.TabIndex = 0;
             this.label25.Text = "HOME键";
+            this.label25.Click += new System.EventHandler(this.Error8_Click);
             // 
             // panel29
             // 
             this.panel29.BackColor = System.Drawing.Color.Silver;
             this.panel29.Controls.Add(this.label24);
-            this.panel29.Location = new System.Drawing.Point(183, 74);
+            this.panel29.Location = new System.Drawing.Point(148, 74);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(112, 27);
             this.panel29.TabIndex = 26;
+            this.panel29.Click += new System.EventHandler(this.Error5_Click);
             // 
             // label24
             // 
@@ -1335,15 +1437,17 @@
             this.label24.Size = new System.Drawing.Size(80, 16);
             this.label24.TabIndex = 0;
             this.label24.Text = "按键亮度+";
+            this.label24.Click += new System.EventHandler(this.Error5_Click);
             // 
             // panel26
             // 
             this.panel26.BackColor = System.Drawing.Color.Silver;
             this.panel26.Controls.Add(this.label21);
-            this.panel26.Location = new System.Drawing.Point(183, 153);
+            this.panel26.Location = new System.Drawing.Point(148, 153);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(112, 27);
             this.panel26.TabIndex = 16;
+            this.panel26.Click += new System.EventHandler(this.Error11_Click);
             // 
             // label21
             // 
@@ -1354,15 +1458,17 @@
             this.label21.Size = new System.Drawing.Size(56, 16);
             this.label21.TabIndex = 0;
             this.label21.Text = "电源键";
+            this.label21.Click += new System.EventHandler(this.Error11_Click);
             // 
             // panel25
             // 
             this.panel25.BackColor = System.Drawing.Color.Silver;
             this.panel25.Controls.Add(this.label20);
-            this.panel25.Location = new System.Drawing.Point(370, 153);
+            this.panel25.Location = new System.Drawing.Point(296, 153);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(112, 27);
             this.panel25.TabIndex = 15;
+            this.panel25.Click += new System.EventHandler(this.Error12_Click);
             // 
             // label20
             // 
@@ -1373,15 +1479,17 @@
             this.label20.Size = new System.Drawing.Size(48, 16);
             this.label20.TabIndex = 0;
             this.label20.Text = "音量+";
+            this.label20.Click += new System.EventHandler(this.Error12_Click);
             // 
             // panel24
             // 
             this.panel24.BackColor = System.Drawing.Color.Silver;
             this.panel24.Controls.Add(this.label19);
-            this.panel24.Location = new System.Drawing.Point(370, 113);
+            this.panel24.Location = new System.Drawing.Point(296, 113);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(112, 27);
             this.panel24.TabIndex = 14;
+            this.panel24.Click += new System.EventHandler(this.Error9_Click);
             // 
             // label19
             // 
@@ -1392,34 +1500,38 @@
             this.label19.Size = new System.Drawing.Size(56, 16);
             this.label19.TabIndex = 0;
             this.label19.Text = "上一曲";
+            this.label19.Click += new System.EventHandler(this.Error9_Click);
             // 
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.Silver;
             this.panel23.Controls.Add(this.label18);
-            this.panel23.Location = new System.Drawing.Point(370, 193);
+            this.panel23.Location = new System.Drawing.Point(148, 231);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(112, 27);
             this.panel23.TabIndex = 13;
+            this.panel23.Click += new System.EventHandler(this.Error16_Click);
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label18.Location = new System.Drawing.Point(29, 6);
+            this.label18.Location = new System.Drawing.Point(30, 6);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(56, 16);
             this.label18.TabIndex = 0;
             this.label18.Text = "触摸屏";
+            this.label18.Click += new System.EventHandler(this.Error16_Click);
             // 
             // panel22
             // 
             this.panel22.BackColor = System.Drawing.Color.Silver;
             this.panel22.Controls.Add(this.label17);
-            this.panel22.Location = new System.Drawing.Point(370, 74);
+            this.panel22.Location = new System.Drawing.Point(296, 74);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(112, 27);
             this.panel22.TabIndex = 12;
+            this.panel22.Click += new System.EventHandler(this.Error6_Click);
             // 
             // label17
             // 
@@ -1430,15 +1542,17 @@
             this.label17.Size = new System.Drawing.Size(80, 16);
             this.label17.TabIndex = 0;
             this.label17.Text = "按键亮度-";
+            this.label17.Click += new System.EventHandler(this.Error6_Click);
             // 
             // panel21
             // 
             this.panel21.BackColor = System.Drawing.Color.Silver;
             this.panel21.Controls.Add(this.label16);
-            this.panel21.Location = new System.Drawing.Point(183, 35);
+            this.panel21.Location = new System.Drawing.Point(148, 35);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(112, 27);
             this.panel21.TabIndex = 11;
+            this.panel21.Click += new System.EventHandler(this.Error2_Click);
             // 
             // label16
             // 
@@ -1449,6 +1563,7 @@
             this.label16.Size = new System.Drawing.Size(80, 16);
             this.label16.TabIndex = 0;
             this.label16.Text = "屏幕亮度+";
+            this.label16.Click += new System.EventHandler(this.Error2_Click);
             // 
             // panel16
             // 
@@ -1456,14 +1571,14 @@
             this.panel16.Controls.Add(this.label11);
             this.panel16.Location = new System.Drawing.Point(1, 1);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(511, 33);
+            this.panel16.Size = new System.Drawing.Size(436, 33);
             this.panel16.TabIndex = 0;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.Location = new System.Drawing.Point(219, 5);
+            this.label11.Location = new System.Drawing.Point(182, 5);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(58, 24);
             this.label11.TabIndex = 0;
@@ -2084,18 +2199,12 @@
             this.btn_Lisening.UseVisualStyleBackColor = true;
             this.btn_Lisening.Click += new System.EventHandler(this.btn_Lisening_Click);
             // 
-            // tabPage1
-            // 
-            this.tabPage1.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1147, 637);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "调试工具";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.tBox_Version);
+            this.tabPage2.Controls.Add(this.btn_ModelLoad);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.tBox_Model);
             this.tabPage2.Controls.Add(this.loader);
             this.tabPage2.Controls.Add(this.ConfigAdr);
             this.tabPage2.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -2105,6 +2214,40 @@
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "参数配置";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tBox_Version
+            // 
+            this.tBox_Version.Enabled = false;
+            this.tBox_Version.Location = new System.Drawing.Point(135, 177);
+            this.tBox_Version.Name = "tBox_Version";
+            this.tBox_Version.Size = new System.Drawing.Size(219, 30);
+            this.tBox_Version.TabIndex = 6;
+            // 
+            // btn_ModelLoad
+            // 
+            this.btn_ModelLoad.Location = new System.Drawing.Point(360, 128);
+            this.btn_ModelLoad.Name = "btn_ModelLoad";
+            this.btn_ModelLoad.Size = new System.Drawing.Size(112, 30);
+            this.btn_ModelLoad.TabIndex = 4;
+            this.btn_ModelLoad.Text = "应用";
+            this.btn_ModelLoad.UseVisualStyleBackColor = true;
+            this.btn_ModelLoad.Click += new System.EventHandler(this.btn_ModelLoad_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(36, 131);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(99, 20);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "产品机型:";
+            // 
+            // tBox_Model
+            // 
+            this.tBox_Model.Location = new System.Drawing.Point(135, 128);
+            this.tBox_Model.Name = "tBox_Model";
+            this.tBox_Model.Size = new System.Drawing.Size(219, 30);
+            this.tBox_Model.TabIndex = 2;
             // 
             // loader
             // 
@@ -2126,6 +2269,12 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.label64);
+            this.tabPage5.Controls.Add(this.label63);
+            this.tabPage5.Controls.Add(this.TimeEnd);
+            this.tabPage5.Controls.Add(this.TimeBeg);
+            this.tabPage5.Controls.Add(this.btn_AllDatas);
+            this.tabPage5.Controls.Add(this.btn_DBRangeQuery);
             this.tabPage5.Controls.Add(this.ConnectToDataBase);
             this.tabPage5.Controls.Add(this.dataGridView);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
@@ -2136,11 +2285,65 @@
             this.tabPage5.Text = "数据查询";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(35, 427);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(59, 12);
+            this.label64.TabIndex = 7;
+            this.label64.Text = "结束时间:";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Location = new System.Drawing.Point(35, 385);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(59, 12);
+            this.label63.TabIndex = 6;
+            this.label63.Text = "开始时间:";
+            // 
+            // TimeEnd
+            // 
+            this.TimeEnd.Location = new System.Drawing.Point(100, 421);
+            this.TimeEnd.Name = "TimeEnd";
+            this.TimeEnd.Size = new System.Drawing.Size(200, 21);
+            this.TimeEnd.TabIndex = 5;
+            // 
+            // TimeBeg
+            // 
+            this.TimeBeg.Location = new System.Drawing.Point(100, 379);
+            this.TimeBeg.Name = "TimeBeg";
+            this.TimeBeg.Size = new System.Drawing.Size(200, 21);
+            this.TimeBeg.TabIndex = 4;
+            // 
+            // btn_AllDatas
+            // 
+            this.btn_AllDatas.Enabled = false;
+            this.btn_AllDatas.Location = new System.Drawing.Point(172, 335);
+            this.btn_AllDatas.Name = "btn_AllDatas";
+            this.btn_AllDatas.Size = new System.Drawing.Size(96, 23);
+            this.btn_AllDatas.TabIndex = 3;
+            this.btn_AllDatas.Text = "获取所有数据";
+            this.btn_AllDatas.UseVisualStyleBackColor = true;
+            this.btn_AllDatas.Click += new System.EventHandler(this.btn_AllDatas_Click);
+            // 
+            // btn_DBRangeQuery
+            // 
+            this.btn_DBRangeQuery.Enabled = false;
+            this.btn_DBRangeQuery.Location = new System.Drawing.Point(306, 379);
+            this.btn_DBRangeQuery.Name = "btn_DBRangeQuery";
+            this.btn_DBRangeQuery.Size = new System.Drawing.Size(75, 63);
+            this.btn_DBRangeQuery.TabIndex = 2;
+            this.btn_DBRangeQuery.Text = "区间查询";
+            this.btn_DBRangeQuery.UseVisualStyleBackColor = true;
+            this.btn_DBRangeQuery.Click += new System.EventHandler(this.btn_DBRangeQuery_Click);
+            // 
             // ConnectToDataBase
             // 
             this.ConnectToDataBase.Location = new System.Drawing.Point(51, 335);
             this.ConnectToDataBase.Name = "ConnectToDataBase";
-            this.ConnectToDataBase.Size = new System.Drawing.Size(75, 23);
+            this.ConnectToDataBase.Size = new System.Drawing.Size(101, 23);
             this.ConnectToDataBase.TabIndex = 1;
             this.ConnectToDataBase.Text = "连接数据库";
             this.ConnectToDataBase.UseVisualStyleBackColor = true;
@@ -2154,6 +2357,16 @@
             this.dataGridView.RowTemplate.Height = 23;
             this.dataGridView.Size = new System.Drawing.Size(790, 309);
             this.dataGridView.TabIndex = 0;
+            // 
+            // root_Debug
+            // 
+            this.root_Debug.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.root_Debug.Location = new System.Drawing.Point(4, 25);
+            this.root_Debug.Name = "root_Debug";
+            this.root_Debug.Size = new System.Drawing.Size(1147, 637);
+            this.root_Debug.TabIndex = 2;
+            this.root_Debug.Text = "调试工具";
+            this.root_Debug.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -2205,6 +2418,7 @@
             this.Panel_Result.PerformLayout();
             this.panel34.ResumeLayout(false);
             this.panel34.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_Error)).EndInit();
             this.panel36.ResumeLayout(false);
             this.panel36.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -2222,8 +2436,14 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.skinPanel1.ResumeLayout(false);
             this.skinPanel2.ResumeLayout(false);
             this.skinPanel2.PerformLayout();
@@ -2239,6 +2459,8 @@
             this.panel37.ResumeLayout(false);
             this.panel37.PerformLayout();
             this.skinPanel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel31.ResumeLayout(false);
             this.panel31.PerformLayout();
             this.panel28.ResumeLayout(false);
@@ -2278,7 +2500,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -2293,16 +2517,7 @@
         private System.Windows.Forms.Label clabel_SoftwareVersion;
         private System.Windows.Forms.Label clabel_AlgoriVersion;
         private System.Windows.Forms.Label Title;
-        private HslCommunication.Controls.UserLantern Result16;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel10;
+        private HslCommunication.Controls.UserLantern Result17;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -2358,7 +2573,6 @@
         private System.Windows.Forms.Panel Panel_Result;
         private System.Windows.Forms.Label Result_End;
         private System.Windows.Forms.Panel panel34;
-        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Panel panel14;
         private CCWin.SkinControl.SkinPanel detectingStop;
         private System.Windows.Forms.Label stopStatus;
@@ -2378,7 +2592,7 @@
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage root_Debug;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox txtIp;
         private System.Windows.Forms.Button btn_Lisening;
@@ -2390,8 +2604,8 @@
         private System.Windows.Forms.ComboBox ConfigAdr;
         private System.Windows.Forms.Button loader;
         private System.Windows.Forms.Button btn_start;
+        private HslCommunication.Controls.UserLantern Result19;
         private HslCommunication.Controls.UserLantern Result18;
-        private HslCommunication.Controls.UserLantern Result17;
         private HslCommunication.Controls.UserLantern Result1;
         private HslCommunication.Controls.UserLantern Result14;
         private HslCommunication.Controls.UserLantern Result12;
@@ -2411,7 +2625,7 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Panel panel36;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label lab_Model;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -2462,6 +2676,30 @@
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Button ConnectToDataBase;
         private System.Windows.Forms.DataGridView dataGridView;
+        private HslCommunication.Controls.UserLantern Result16;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label ResultShow_DarkL;
+        private System.Windows.Forms.Label ResultShow_L;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox picBox_Error;
+        private System.Windows.Forms.Button btn_ModelLoad;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tBox_Model;
+        private System.Windows.Forms.Label lab_ErrorMsg;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label ratio;
+        private System.Windows.Forms.Label cnt_Sum;
+        private System.Windows.Forms.Label cnt_TodayNG;
+        private System.Windows.Forms.Label cnt_TodayOK;
+        private System.Windows.Forms.Button btn_DBRangeQuery;
+        private System.Windows.Forms.Button btn_AllDatas;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.DateTimePicker TimeEnd;
+        private System.Windows.Forms.DateTimePicker TimeBeg;
+        private System.Windows.Forms.TextBox tBox_Version;
     }
 }
 

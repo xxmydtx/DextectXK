@@ -19,6 +19,7 @@ namespace Detect_xk
             Application.SetCompatibleTextRenderingDefault(false);
             Ins = new MainForm();
             Application.Run(Ins);
+            
         }
     }
 }

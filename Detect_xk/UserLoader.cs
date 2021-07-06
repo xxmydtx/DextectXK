@@ -14,6 +14,7 @@ namespace Detect_xk
     {
         public string PassWord;
         public string UserName;
+        public bool IsIn = false;
         public UserLoader()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace Detect_xk
                 
                 PassWord = textUserMima.Text;
                 UserName = textUserName.Text;
+                IsIn = true;
                 this.DialogResult = System.Windows.Forms.DialogResult.OK;
                 this.Close();
             }
