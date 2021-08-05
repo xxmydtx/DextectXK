@@ -55,7 +55,7 @@ namespace Detect_xk
 
         //记录一些静态信息
         public static string[] CheckMsg = {
-            "软件开启","背光开启","按键亮度+","按键亮度-","屏幕亮度+","HOME键","上一曲","Power键","音量-","音量+","下一曲","BACK键","屏幕亮度-","退出键","暗电流","触摸屏","工作电流","按键丝印形状","按键丝印位置","按键丝印亮度"
+            "软件开启","背光开启","屏幕亮度+","按键亮度+","HOME键","上一曲","Power键","音量-","音量+","下一曲","BACK键","按键亮度-","屏幕亮度-","退出键","暗电流","触摸屏","工作电流","按键丝印形状","按键丝印位置","按键丝印亮度"
         };
         //当日的统计数据
         int cntOK, cntNG;
@@ -119,9 +119,9 @@ namespace Detect_xk
         // 每块板子的预处理
         bool isLastNotBack = false;
         int curMark = 0;
-        int[] LC1 = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
-        int[] LC2 = { 13, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ,20};
-        int[] LC;
+        static int[] LC1 = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+        static int[] LC2 = { 13, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ,20};
+        int[] LC = LC1;// 初始化成第一个
         // 退出检测的次数
         int cntBack;
         // 进入检测的次数
@@ -137,7 +137,7 @@ namespace Detect_xk
                 //完成一块板子的检测
                 if (curCnt == Cnt)
                 {
-                    WorkingCur = false;
+                    WorkingCur = false;// 工作电流
                     ModBus.WriteSingleCoilAsync("21", "1");// 暂定21为终止指令
                     // 在这里写入数据库
                     status = Status.WAIT_FOR_USER;
@@ -189,7 +189,6 @@ namespace Detect_xk
                         LC = LC2;// 错误退出的流程
                     }
                     else LC = LC1;// 正确退出的流程
-                    curDataMes.ScreenRightUp = "OK";
                     curCnt = LC[curMark];
                 }
                 switch (status)
@@ -210,30 +209,33 @@ namespace Detect_xk
                         }
                         break;
                     case Status.DETECTING:
+                        //
                         //应该在这里拍摄照片,拍照前检测相机是否连接正常
-                        if(!Is_Camera)
-                        {
-                            MessageBox.Show("相机连接不正常，请检查！");
-                            break;
-                        }
-                        Get_Picture(curCnt);
+
+                        //if(!Is_Camera)
+                        //{
+                        //    MessageBox.Show("相机连接不正常，请检查！");
+                        //    break;
+                        //}
+                        //Get_Picture(curCnt);
+
                         Detecting();
                         // 退出的持续监测
                         if(curCnt == 13)
                         {
                             int curTime = cntBack;
-                            while (curCnt == 13 && curDataMes.ScreenRightUp == "NG" && curTime > 0)//持续检测,与是不是第一次无关
+                            while (curCnt == 13 && Res[13] == Result.False && curTime > 0)//持续检测,与是不是第一次无关
                             {
-                                if (!Is_Camera)
-                                {
-                                    MessageBox.Show("相机连接不正常，请检查！");
-                                    break;
-                                }
+                                //if (!Is_Camera)// 排除相机干扰
+                                //{
+                                //    MessageBox.Show("相机连接不正常，请检查！");
+                                //    break;
+                                //}
                                 //Get_Picture(curCnt);
                                 Detecting();
                                 curTime--;
                             }
-                            if(curDataMes.ScreenRightUp == "OK" && isLastNotBack == true) // 如果是因为上一次失败而进入的阶段13
+                            if(Res[13] == Result.True && isLastNotBack == true) // 如果是因为上一次失败而进入的阶段13
                             {
                                 isLastNotBack = false;
                             }
@@ -241,7 +243,7 @@ namespace Detect_xk
                             {
                                 curMark = 20;// 当前等于20 加一下就成21了 就该退出了
                             }
-                            break;
+                            if (Res[13] == Result.False) isLastNotBack = true;
                         }
                         // 进入的持续检测
                         if (curCnt == 0)
@@ -249,11 +251,11 @@ namespace Detect_xk
                             int curTime = cntEnter;
                             while (curCnt == 0 && curDataMes.ScreenLeftUp == "NG" && curTime > 0)//持续检测,与是不是第一次无关
                             {
-                                if (!Is_Camera)
-                                {
-                                    MessageBox.Show("相机连接不正常，请检查！");
-                                    break;
-                                }
+                                //if (!Is_Camera)// 排除相机干扰
+                                //{
+                                //    MessageBox.Show("相机连接不正常，请检查！");
+                                //    break;
+                                //}
                                 //Get_Picture(curCnt);
                                 Detecting();
                                 curTime--;
@@ -276,7 +278,7 @@ namespace Detect_xk
         {
             
             
-            
+          
             if (this.InvokeRequired)
             {
                 this.BeginInvoke(new ShowInfoDelegate(ShowInfo), new object[] { barCode });
@@ -652,8 +654,6 @@ namespace Detect_xk
         /// </summary>
         private void init()
         {
-            // 在这里看是否退出成功的
-            if(curDataMes.ScreenRightUp == "NG")// 触摸屏右上是坏的，说明退出失败
             // 初始化当前数据库信息
             curDataMes = new DataMes();
             curDataMes.DT = DateTime.Now;
@@ -709,9 +709,10 @@ namespace Detect_xk
         /// <returns></returns>
         bool WaitForReady()
         {
-            var temp = ModBus.ReadCoils("20", "1");
-            if(temp == false) return true; // 接着循环
-            ModBus.WriteSingleCoilAsync("20", "0");
+            Thread.Sleep(1000);//需要延时，时间太短虚拟slave那边会出错
+            var temp = ModBus.ReadCoils("500", "1");//M500
+            if (temp == false) return true; // 接着循环
+            ModBus.WriteSingleCoilAsync("500", "0");
             status = Status.DETECTING;
             return false; //跳出循环
         }
@@ -736,19 +737,24 @@ namespace Detect_xk
                     }
                     break;
                 case 1: // 关闭背光
-                    if(Res[curCnt] == Result.False) // 第二个晚上再来补充吧
+                    if(Res[curCnt] == Result.False) //
                     {
-                        curDataMes.ScreenBrightness = "NG";
                         curDataMes.ScreenLeftUp = "NG";
                     }
                     else
                     {
-                        curDataMes.ScreenBrightness = "OK";
                         curDataMes.ScreenLeftUp = "OK";
                     }
                     break;
-                case 2: // 按键亮度 + 
-                    if(Res[curCnt] == Result.False) // 说明按键亮度没有增增加
+                case 2: // 屏幕亮度 + 
+                    if (Res[curCnt] == Result.False) // 如果屏幕亮度没增加 这里就要置为false
+                    {
+                        curDataMes.ScreenBrightness = "NG";
+                    }
+                    
+                    break;
+                case 3: // 按键亮度+
+                    if (Res[curCnt] == Result.False) // 说明按键亮度没有增加
                     {
                         // 那么这里数据库里要怎么搞？
                         curDataMes.ScreenLeftDown = "NG";
@@ -758,8 +764,39 @@ namespace Detect_xk
                         curDataMes.ScreenLeftDown = "OK";
                     }
                     break;
-                case 3: // 按键亮度 -
-                    if (Res[curCnt] == Result.False) // 说明按键亮度没有增增加
+                case 4:// HOME
+                    break;
+                case 5:// 上一曲
+                    break;
+                case 6://POWER
+                    break;
+                case 7:// 音量-
+                    break;
+                case 8://音量+
+                    if (Res[8] == Result.False || Res[7] == Result.False)
+                    {
+                        curDataMes.KnobFunc = "OK";
+                    }
+                    else curDataMes.KnobFunc = "NG";
+                    break;
+                case 9://下一曲
+                    break;
+                case 10:// BACK
+                    if (Res[4] == Result.False ||
+                        Res[5] == Result.False ||
+                        Res[6] == Result.False ||
+                        Res[9] == Result.False ||
+                        Res[10] == Result.False )
+                    {
+                        curDataMes.KeyFunc = "NG";
+                    }
+                    else
+                    {
+                        curDataMes.KeyFunc = "OK";
+                    }
+                    break;
+                case 11:// 按键亮度-
+                    if (Res[curCnt] == Result.False) // 说明按键亮度没有减少
                     {
                         // 那么这里数据库里要怎么搞？
                         curDataMes.ScreenRightDown = "NG";
@@ -767,43 +804,6 @@ namespace Detect_xk
                     else
                     {
                         curDataMes.ScreenRightDown = "OK";
-                    }
-                    break;
-                case 4:// 屏幕亮度 +
-                    if (Res[curCnt] == Result.False) // 如果屏幕亮度没增加 这里就要置为false
-                    {
-                        curDataMes.ScreenBrightness = "NG";
-                    }
-                    break;
-                case 5:// HOME
-                    break;
-                case 6:// 上一曲
-                    break;
-                case 7://POWER
-                    break;
-                case 8:// 音量-
-                    break;
-                case 9://音量+
-                    if (Res[8] == Result.False || Res[9] == Result.False)
-                    {
-                        curDataMes.KnobFunc = "OK";
-                    }
-                    else curDataMes.KnobFunc = "NG";
-                    break;
-                case 10://下一曲
-                    break;
-                case 11:// BACK
-                    if (Res[5] == Result.False ||
-                        Res[6] == Result.False ||
-                        Res[7] == Result.False ||
-                        Res[10] == Result.False ||
-                        Res[11] == Result.False )
-                    {
-                        curDataMes.KeyFunc = "NG";
-                    }
-                    else
-                    {
-                        curDataMes.KeyFunc = "OK";
                     }
                     break;
                 case 12:// 屏幕亮度-
@@ -1138,13 +1138,12 @@ namespace Detect_xk
         void ComInit()
         {
  
-            com1_Name.Text = "COM5";
+            com1_Name.Text = "COM1";
             com1_Baud.Text = "9600";
             com1_Data.Text = "8";
             com1_Hand.Text = "None";
             com1_Stop.Text = "1";
             com.InitCom(com1_Name.Text, com1_Baud.Text, com1_Data.Text, com1_Hand.Text, com1_Stop.Text, ref com.com1);
-            com.com1.DataReceived += new SerialDataReceivedEventHandler(Com1Receive);
             btn_OpenCom1_Click(null, null);
             //com.InitCom(com2_Name.Text, com2_Baud.Text, com2_Data.Text, com2_Hand.Text, com2_Stop.Text, ref com.com2);
         }
@@ -1260,40 +1259,40 @@ namespace Detect_xk
             switch(curCnt)
             {
                 case 0:
-                    // 一开始什么也不发送，直接过去就好
+                    ModBus.WriteSingleCoilAsync("1", "1");//开始第一个 按下 桌面APP图标
                     break;
                 case 1:
                     ModBus.WriteSingleCoilAsync("2", "1");//开始第二个 按下 “关闭背光”
                     break;
                 case 2:
-                    ModBus.WriteSingleCoilAsync("3", "1");//开始第三个 按下 “按键亮度+”
+                    ModBus.WriteSingleCoilAsync("3", "1");//开始第三个 按下 “屏幕亮度+”
                     break;
                 case 3:
-                    ModBus.WriteSingleCoilAsync("4", "1");//开始第四个 按下 “按键亮度-”
+                    ModBus.WriteSingleCoilAsync("4", "1");//开始第四个 按下 “按键亮度+”
                     break;
                 case 4:
-                    ModBus.WriteSingleCoilAsync("5", "1");//开始第五个 按下 “屏幕亮度+”
+                    ModBus.WriteSingleCoilAsync("5", "1");//开始第五个 按下 “HOME+”
                     break;
                 case 5:
-                    ModBus.WriteSingleCoilAsync("6", "1");// 开始第六个 按下 丝印“HOME”
+                    ModBus.WriteSingleCoilAsync("6", "1");// 开始第六个 按下 丝印“上一曲”
                     break;
                 case 6:
-                    ModBus.WriteSingleCoilAsync("7", "1");// 开始第七个 按下 丝印“上一曲”
+                    ModBus.WriteSingleCoilAsync("7", "1");// 开始第七个 按下 丝印“power”
                     break;
                 case 7:
-                    ModBus.WriteSingleCoilAsync("8", "1");// 开始第八个 按下 丝印“power”
+                    ModBus.WriteSingleCoilAsync("8", "1");// 开始第八个 旋转 旋钮“音量-”
                     break;
                 case 8:
-                    ModBus.WriteSingleCoilAsync("9", "1");// 开始第九个 旋转 旋钮“音量-”
+                    ModBus.WriteSingleCoilAsync("9", "1");// 开始第九个 旋转 旋钮“音量+”
                     break;
                 case 9:
-                    ModBus.WriteSingleCoilAsync("10", "1");// 开始第十个 旋转 旋钮“音量+”
+                    ModBus.WriteSingleCoilAsync("10", "1");// 开始第十个 按下 按键“下一曲”
                     break;
                 case 10:
-                    ModBus.WriteSingleCoilAsync("11", "1");// 开始第十一个 按下 丝印 “下一曲”
+                    ModBus.WriteSingleCoilAsync("11", "1");// 开始第十一个 按下 丝印 “BACK”
                     break;
                 case 11:
-                    ModBus.WriteSingleCoilAsync("12", "1");// 开始第十二个 按下 丝印“BACK”
+                    ModBus.WriteSingleCoilAsync("12", "1");// 开始第十二个 按下 “按键亮度-”
                     break;
                 case 12:
                     ModBus.WriteSingleCoilAsync("13", "1");// 开始第十三个 按下 “屏幕亮度-”
@@ -1375,7 +1374,7 @@ namespace Detect_xk
             switch (curCnt)
             {
                 // P
-                case 0:
+                case 0:// 点击桌面APP
                     //if (Detect_Algorithm.brightPulsDetection(PicAdr + "1.bmp", PicAdr + "2.bmp", 5))
                     if(true)// 检测APP是否打开，执行APP是否打开函数 入口是一张图
                     {
@@ -1393,26 +1392,8 @@ namespace Detect_xk
                     else Res[curCnt] = Result.False;
                     break;
                 // P
-                case 2:// 按键亮度 + 
-                    
-                    if (algorithm.Alg1()) // 判断 丝印按键亮度 是否增加 （hjp 入口参数是两个，一个是 “关闭背光” 拍的图，一个是 “按键亮度+” 拍的图
-                    {
-                        Res[curCnt] = Result.True;
-                    }
-                    else Res[curCnt] = Result.False;
-                    break;
-                // P
-                case 3:// 按键亮度 -
-
-                    if (algorithm.Alg1())// 判断 丝印按键亮度 是否减少 （hjp 入口参数是两个，一个是 “按键亮度+” 拍的图，一个是当前“按键亮度-” 拍的图
-                    {
-                        Res[curCnt] = Result.True;
-                    }
-                    else Res[curCnt] = Result.False;
-                    break;
-                // P
-                case 4:// 屏幕亮度+
-                    ModBus.ReadHoldingRegisters("22", "1");
+                case 2://屏幕亮度 +
+                    ModBus.ReadHoldingRegisters("180", "1");// 采集工作电流
                     if (ModBus.registerBuffer[0] > 100) WorkingCur = false;// 假设 100 是设置的最大额定电流
                     else WorkingCur = true;
                     if (algorithm.Alg1()) // 判断 屏幕亮度 是否增加（zj 入口参数有两个 一个是 case0 时拍摄的照片 “检测APP是否打开”，一个是这个步骤拍的照片
@@ -1421,8 +1402,16 @@ namespace Detect_xk
                     }
                     else Res[curCnt] = Result.False;
                     break;
+                case 3:// 按键亮度 + 
+                    
+                    if (algorithm.Alg1()) // 判断 丝印按键亮度 是否增加 （hjp 入口参数是两个，一个是 “关闭背光” 拍的图，一个是 “按键亮度+” 拍的图
+                    {
+                        Res[curCnt] = Result.True;
+                    }
+                    else Res[curCnt] = Result.False;
+                    break;
                 // P
-                case 5:// 丝印 HOME
+                case 4:// 丝印 HOME
                     if (algorithm.Alg1())// 判断 丝印 HOME 是否有效 (zj 入口参数就一张图
                     {
                         Res[curCnt] = Result.True;
@@ -1430,7 +1419,7 @@ namespace Detect_xk
                     else Res[curCnt] = Result.False;
                     break;
                 // P
-                case 6:// 丝印 上一曲
+                case 5:// 丝印 上一曲
                     if (algorithm.Alg1())// 判断 丝印 上一曲 是否有效(zj 入口参数一张图
                     {
                         Res[curCnt] = Result.True;
@@ -1438,7 +1427,7 @@ namespace Detect_xk
                     else Res[curCnt] = Result.False;
                     break;
                 // P
-                case 7:// 丝印 Power
+                case 6:// 丝印 Power
                     if (algorithm.Alg1())// 判断 丝印 power 是否有效(zj 入口参数一张图
                     {
                         Res[curCnt] = Result.True;
@@ -1446,7 +1435,7 @@ namespace Detect_xk
                     else Res[curCnt] = Result.False;
                     break;
                 // P
-                case 8:// 旋钮 音量-
+                case 7:// 旋钮 音量-
                     if (algorithm.Alg1())// 判断 旋钮 音量- 是否有效 （zj 入口参数一张图
                     {
                         Res[curCnt] = Result.True;
@@ -1454,7 +1443,7 @@ namespace Detect_xk
                     else Res[curCnt] = Result.False;
                     break;
                 // P
-                case 9:// 旋钮 音量+
+                case 8:// 旋钮 音量+
                     if (algorithm.Alg1())// 判断 旋钮 音量+ 是否有效(zj 入口参数一张图
                     {
                         Res[curCnt] = Result.True;
@@ -1462,7 +1451,7 @@ namespace Detect_xk
                     else Res[curCnt] = Result.False;
                     break;
                 // P
-                case 10://丝印 下一曲
+                case 9://丝印 下一曲
                     if (algorithm.Alg1())// 判断 丝印 下一曲 是否有效 （zj 入口一张图
                     {
                         Res[curCnt] = Result.True;
@@ -1470,7 +1459,7 @@ namespace Detect_xk
                     else Res[curCnt] = Result.False;
                     break;
                 // P
-                case 11:// 丝印 back 
+                case 10:// 丝印 back 
                     if (algorithm.Alg1())// 判断 丝印 back 是否有效（zj 入口一张图
                     {
                         Res[curCnt] = Result.True;
@@ -1478,6 +1467,15 @@ namespace Detect_xk
                     else Res[curCnt] = Result.False;
                     break;
                 // P
+                // P
+                case 11:// 按键亮度 -
+
+                    if (algorithm.Alg1())// 判断 丝印按键亮度 是否减少 （hjp 入口参数是两个，一个是 “按键亮度+” 拍的图，一个是当前“按键亮度-” 拍的图
+                    {
+                        Res[curCnt] = Result.True;
+                    }
+                    else Res[curCnt] = Result.False;
+                    break;
                 case 12:// 屏幕亮度 -
                     if (algorithm.Alg1())// 判断 屏幕亮度 是否减少 （zj 入口两张图  “屏幕亮度+” 时拍的图，以及当前拍的 
                     {
@@ -1509,7 +1507,7 @@ namespace Detect_xk
                     }
                     break;
                 case 14:// 检测暗电流
-                    ModBus.ReadHoldingRegisters("22", "1");// 假设电流写在22里
+                    ModBus.ReadHoldingRegisters("180", "1");// 假设电流写在22里
                     if (ModBus.registerBuffer[0] > 100) // 这里不需要跑算法，只需要 读一下线圈 然后比对一下即可,假设100是从配置界面读到的参数
                     {
                         Res[curCnt] = Result.True;
@@ -1530,7 +1528,6 @@ namespace Detect_xk
                 case 16:// 工作电流
                     if (WorkingCur)
                     {
-                        
                         Res[curCnt] = Result.True;
                     }
                     else Res[curCnt] = Result.False;
@@ -1565,8 +1562,8 @@ namespace Detect_xk
             if (btn_OpenCom1.Text == "打开串口")
             {
                 com.InitCom(com1_Name.Text, com1_Baud.Text, com1_Data.Text, com1_Hand.Text, com1_Stop.Text, ref com.com1);
-                com.com1.DataReceived += new SerialDataReceivedEventHandler(Com1Receive);
-                //com.com1.Open();
+                //com.com1.DataReceived += new SerialDataReceivedEventHandler(Com1Receive);
+                com.com1.Open();
                 com1_Name.Enabled = false;
                 com1_Baud.Enabled = false;
                 com1_Data.Enabled = false;

@@ -1348,7 +1348,7 @@
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(56, 16);
             this.label26.TabIndex = 0;
-            this.label26.Text = "下一曲";
+            this.label26.Text = "Back键";
             this.label26.Click += new System.EventHandler(this.Error10_Click);
             // 
             // Result9
@@ -1465,11 +1465,11 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label28.Location = new System.Drawing.Point(29, 6);
+            this.label28.Location = new System.Drawing.Point(19, 7);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(56, 16);
+            this.label28.Size = new System.Drawing.Size(80, 16);
             this.label28.TabIndex = 0;
-            this.label28.Text = "BACK键";
+            this.label28.Text = "按键亮度-";
             this.label28.Click += new System.EventHandler(this.Error11_Click);
             // 
             // panel32
@@ -1486,11 +1486,11 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label27.Location = new System.Drawing.Point(32, 6);
+            this.label27.Location = new System.Drawing.Point(33, 6);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(48, 16);
             this.label27.TabIndex = 0;
-            this.label27.Text = "音量-";
+            this.label27.Text = "音量+";
             this.label27.Click += new System.EventHandler(this.Error8_Click);
             // 
             // panel30
@@ -1511,7 +1511,7 @@
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(56, 16);
             this.label25.TabIndex = 0;
-            this.label25.Text = "HOME键";
+            this.label25.Text = "上一曲";
             this.label25.Click += new System.EventHandler(this.Error5_Click);
             // 
             // panel29
@@ -1532,7 +1532,7 @@
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(80, 16);
             this.label24.TabIndex = 0;
-            this.label24.Text = "按键亮度+";
+            this.label24.Text = "屏幕亮度+";
             this.label24.Click += new System.EventHandler(this.Error2_Click);
             // 
             // panel26
@@ -1549,11 +1549,11 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label21.Location = new System.Drawing.Point(25, 6);
+            this.label21.Location = new System.Drawing.Point(33, 6);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(64, 16);
+            this.label21.Size = new System.Drawing.Size(48, 16);
             this.label21.TabIndex = 0;
-            this.label21.Text = "Power键";
+            this.label21.Text = "音量-";
             this.label21.Click += new System.EventHandler(this.Error7_Click);
             // 
             // panel25
@@ -1572,9 +1572,9 @@
             this.label20.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label20.Location = new System.Drawing.Point(33, 6);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(48, 16);
+            this.label20.Size = new System.Drawing.Size(56, 16);
             this.label20.TabIndex = 0;
-            this.label20.Text = "音量+";
+            this.label20.Text = "下一曲";
             this.label20.Click += new System.EventHandler(this.Error9_Click);
             // 
             // panel24
@@ -1593,9 +1593,9 @@
             this.label19.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label19.Location = new System.Drawing.Point(28, 6);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(56, 16);
+            this.label19.Size = new System.Drawing.Size(64, 16);
             this.label19.TabIndex = 0;
-            this.label19.Text = "上一曲";
+            this.label19.Text = "Power键";
             this.label19.Click += new System.EventHandler(this.Error6_Click);
             // 
             // panel23
@@ -1633,11 +1633,11 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label17.Location = new System.Drawing.Point(16, 6);
+            this.label17.Location = new System.Drawing.Point(18, 6);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(80, 16);
             this.label17.TabIndex = 0;
-            this.label17.Text = "按键亮度-";
+            this.label17.Text = "按键亮度+";
             this.label17.Click += new System.EventHandler(this.Error3_Click);
             // 
             // panel21
@@ -1654,11 +1654,11 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label16.Location = new System.Drawing.Point(17, 5);
+            this.label16.Location = new System.Drawing.Point(28, 6);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(80, 16);
+            this.label16.Size = new System.Drawing.Size(56, 16);
             this.label16.TabIndex = 0;
-            this.label16.Text = "屏幕亮度+";
+            this.label16.Text = "Home键";
             this.label16.Click += new System.EventHandler(this.Error4_Click);
             // 
             // panel16
