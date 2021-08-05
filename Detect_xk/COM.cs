@@ -78,7 +78,7 @@ namespace Detect_xk
             }
             com.DataBits = Convert.ToInt32(data);
             com.RtsEnable = true;
-            com.Open();
+            //com.Open();
         }
     }
 }

@@ -64,6 +64,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
     </Reference>
+    <Reference Include="MvCameraControl.Net, Version=3.4.0.1, Culture=neutral, PublicKeyToken=52fddfb3f94be800, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\MvCameraControl.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NModbus4, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NModbus4.2.1.0\lib\net40\NModbus4.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -81,12 +88,14 @@
     <Compile Include="Arm.cs" />
     <Compile Include="COM.cs" />
     <Compile Include="DataBase.cs" />
+    <Compile Include="LineCode.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MotorBus.cs" />
     <Compile Include="Operator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +124,7 @@
     <EmbeddedResource Include="UserLoader.resx">
       <DependentUpon>UserLoader.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -139,6 +149,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\111.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxMSCommLib">
+      <Guid>{648A5603-2C6E-101B-82B6-000000000014}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MSCommLib">
+      <Guid>{648A5603-2C6E-101B-82B6-000000000014}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
